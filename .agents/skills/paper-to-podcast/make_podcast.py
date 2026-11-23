@@ -51,8 +51,8 @@ TAGLINE = (
 )
 CLOSING = (
     "You've been listening to The Finance Papers Podcast. The link to the original paper, the full script, and a "
-    "guide to contribute your own episode are on GitHub. Music: JASM HEART, by MadGravityStudio, under a Creative Commons "
-    "Attribution license."
+    "guide to contribute your own episode are on GitHub. Music: JASM HEART, by MadGravityStudio, under a Creative "
+    "Commons Attribution license."
 )
 
 
