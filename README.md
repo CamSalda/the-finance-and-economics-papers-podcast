@@ -26,9 +26,9 @@ listener is a finance student with some technical training who is still learning
 the authors, their academic connections and the papers around each one. Every episode comes with its
 full script, which doubles as a transcript. Episodes last at most 30 minutes.
 
-Every episode has the same shape. It opens with the show's theme and the tagline "The Finance Papers Podcast.
-Research in finance. A free, open-source educational project in which we discuss and explain classical papers and
-current research in finance." Then come a short cold open, the episode, and a one-minute recap of the paper's
+Every episode has the same shape. It opens with the show's theme and the tagline "The Finance Papers Podcast. A
+free, open-source educational project in which we discuss and explain classical papers and current research in
+finance." Then come a short cold open, the episode, and a one-minute recap of the paper's
 question, method, main takeaways and conclusions. The theme returns at the end. The generator adds the theme
 automatically.
 
@@ -112,14 +112,20 @@ finance.
 
    **Personalize the hosts.** We invite you to put your own names on your episode. Write `ANA:` and `PEDRO:` instead
    of `MEI:` and `MIGUEL:`, keeping the two roles: the first host to speak is the guide, the second the student. To pick
-   the voices, add a line such as `- **Voices:** ANA=af_bella, PEDRO=am_adam` to the script header.
-6. Render the audio. The first time, download the two voice model files listed at the top of
-   [make_podcast.py](.agents/skills/paper-to-podcast/make_podcast.py) into the `models/` folder next to it.
+   the voices, add a line such as `- **Voices:** ANA=af_bella, PEDRO=qwen:pedro` to the script header. A name like
+   `af_bella` is a Kokoro voice. `qwen:pedro` clones a reference clip you add as `assets/voices/pedro.wav`, with its
+   transcript in `assets/voices/pedro.txt`. Use only a voice you created or have the right to use, never a recording
+   of a real person without their permission.
+6. Render the audio. **This needs an NVIDIA GPU** for Miguel's voice, and takes roughly 25 to 45 minutes for a
+   full episode (see [About the audio](#about-the-audio)). The first time, download the two Kokoro model files listed
+   at the top of [make_podcast.py](.agents/skills/paper-to-podcast/make_podcast.py) into the `models/` folder next
+   to it.
    Always render with this script. It adds the show's intro and outro, including the music credit that the theme's
    license requires.
 
    ```
-   pip install kokoro-onnx edge-tts lameenc scipy
+   pip install torch --index-url https://download.pytorch.org/whl/cu124
+   pip install kokoro-onnx qwen-tts audiotsm lameenc scipy
    python .agents/skills/paper-to-podcast/make_podcast.py episodes/<slug>/script.md episodes/<slug>/episode.mp3
    ```
 
@@ -176,10 +182,26 @@ This project respects the rights of authors and publishers.
 
 ## About the audio
 
-Mei's voice is generated with [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M), an open-weight text-to-speech
-model released under the Apache 2.0 license. Miguel's voice is Microsoft's Andrew neural voice, generated through
-the open-source [edge-tts](https://github.com/rany2/edge-tts) package. Microsoft does not publish explicit terms for
-redistributing audio from this service. If Microsoft objects, we will re-render the episodes with an open voice.
+We use two open-source text-to-speech models, both released under the Apache 2.0 license:
+
+- **[Kokoro](https://huggingface.co/hexgrad/Kokoro-82M)** voices Mei, with its `af_heart` voice. It is a small model
+  (82 million parameters) that runs on any computer. We use the
+  [kokoro-onnx](https://github.com/thewh1teagle/kokoro-onnx) version.
+- **[Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)** voices Miguel. Its
+  [Base model](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base) clones the reference clip
+  `assets/voices/miguel.wav`, a voice we created with Qwen3-TTS's preset speaker Aiden, so Miguel sounds the same
+  in every episode. His lines are sped up by 15% without changing pitch.
+
+Both voices are synthetic. Neither imitates a real person.
+
+**A GPU is required.** Qwen3-TTS, which voices Miguel, needs an NVIDIA GPU with CUDA and about 8 GB of video
+memory. Kokoro, which voices Mei, runs on any computer, so an episode hosted only with Kokoro voices renders without
+a GPU.
+
+**Render time.** On a laptop with an NVIDIA RTX 4060 (8 GB), Miguel's lines take about 3 seconds of computing per
+second of audio, and Mei's about 0.3 seconds. A full 20 to 30 minute episode therefore takes roughly **25 to 45
+minutes** to render. Faster GPUs, or Linux with FlashAttention installed, shorten this. The first run also downloads
+the Qwen3-TTS model (about 4.5 GB).
 
 The theme music is [JASM HEART](https://freesound.org/people/MadGravityStudio/sounds/834509/) by MadGravityStudio,
 licensed under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). It is used
