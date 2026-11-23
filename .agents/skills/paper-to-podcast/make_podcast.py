@@ -44,6 +44,7 @@ QWEN_MODEL = "Qwen/Qwen3-TTS-12Hz-1.7B-Base"
 QWEN_SAMPLING = dict(temperature=0.3, subtalker_temperature=0.3)
 QWEN_SEED = 1234
 QWEN_SPEED = 1.15
+QWEN_LOUDNESS = 1.2
 QWEN_PRONUNCIATIONS = {"Miguel": "Mi-GHEL"}
 TAGLINE = (
     "The Finance Papers Podcast. A free, open-source educational project in which we discuss and explain classical "
@@ -98,11 +99,13 @@ class Qwen:
 
 def synthesize(engines, text, voice):
     """Kokoro voices are named like af_heart; Qwen3-TTS cloned voices like qwen:miguel."""
+    loudness = TURN_LOUDNESS
     if voice.startswith("qwen:"):
         samples = engines["qwen"].say(text, voice.removeprefix("qwen:"))
+        loudness *= QWEN_LOUDNESS
     else:
         samples, _ = engines["kokoro"].create(text, voice=voice, speed=KOKORO_SPEED, lang="en-us")
-    return samples.astype(np.float32) * (TURN_LOUDNESS / np.sqrt(np.mean(samples**2)))
+    return samples.astype(np.float32) * (loudness / np.sqrt(np.mean(samples**2)))
 
 
 def speak(engines, turns, voices):
