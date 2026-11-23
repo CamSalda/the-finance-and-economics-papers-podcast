@@ -29,29 +29,35 @@ MEI: Stay with me, it's worth it. George Constantinides and Darrell Duffie, "Ass
 
 JUAN: Quick recap of Mankiw for anyone who skipped last week?
 
-MEI: Mankiw said: when a recession hits, it doesn't hit everyone a little. It hits some people a lot. If people can't insure against being among the unlucky, and if marginal utility is convex, then stocks look much riskier than aggregate data suggest. So you'd overestimate risk aversion if you only looked at averages.
+MEI: Mankiw said that recessions hit some people a lot instead of everyone a little. If people can't insure that risk, and marginal utility is convex, stocks look much riskier than aggregate data suggest.
 
 JUAN: The hamster in the bomb shelter was just a normal person afraid of losing their job.
 
 MEI: Exactly. But Mankiw's model had two dates and one coin flip. A toy. Constantinides and Duffie take that idea and build a full dynamic economy, with many periods, many assets, and an equation you can actually take to the data.
 
-JUAN: Any fun facts before we start? Last time we had Fischer Black as the referee.
+JUAN: Who are these two?
 
-MEI: Two. First, the acknowledgments say Lars Hansen "provided a correction and many helpful suggestions."
+MEI: George Constantinides is at the Chicago Booth School of Business. He was born in Cyprus and studied physics at Oxford before he turned to finance. Darrell Duffie has been at Stanford since finishing his PhD there in 1984. He wrote the textbook Dynamic Asset Pricing Theory, which this very paper cites.
+
+JUAN: Citing your own textbook. Power move.
+
+MEI: Both later served as president of the American Finance Association: Constantinides in 2001, Duffie in 2009. And the acknowledgments are fun too. Lars Hansen "provided a correction and many helpful suggestions."
 
 JUAN: Lars Hansen, the Nobel prize Lars Hansen? Corrected their math?
 
-MEI: That one. Second, Constantinides acknowledges funding from a gift by Dimensional Fund Advisors to the Chicago business school.
+MEI: That one. He shared the 2013 Nobel with Eugene Fama and Robert Shiller. And Constantinides acknowledges funding from a gift by Dimensional Fund Advisors to the Chicago business school.
 
 JUAN: So a fund company paid for research on why stocks pay so much. I'm sure that was completely neutral.
 
-MEI: Let's assume so.
+MEI: At least it's disclosed. Constantinides served as an independent director of Dimensional's funds for about four decades, and Duffie joined that same board in 2019.
+
+JUAN: So the two authors ended up on the same board. Academia is a small town.
 
 ## Why the earlier fixes failed
 
 JUAN: Okay, set the scene. What's wrong with the standard model?
 
-MEI: The standard model is the representative-consumer model of Lucas, 1978. One imaginary consumer eats the whole economy's consumption, and asset prices must satisfy that consumer's Euler equation.
+MEI: The standard model is the representative-consumer model of Lucas, 1978. Lucas, by the way, won the Nobel prize in 1995. One imaginary consumer eats the whole economy's consumption, and asset prices must satisfy that consumer's Euler equation.
 
 JUAN: Remind me what an Euler equation is.
 
@@ -61,13 +67,11 @@ JUAN: So it's the "no regrets" condition. You can't make yourself happier by mov
 
 MEI: Lovely way to say it. And the paper lists the problems with the representative version. Mehra and Prescott showed it predicts an equity premium that is too low and a risk-free interest rate that is too high, because aggregate consumption is so smooth.
 
-JUAN: Two puzzles for the price of one.
-
 MEI: The equity premium puzzle and the risk-free rate puzzle. And it gets worse. Formal tests by Hansen and Singleton and others rejected the Euler equations even when risk aversion was allowed to be anything at all.
 
 JUAN: So even with a crazy risk aversion of a hundred, it still fails?
 
-MEI: Still fails. So people tried to fix the preferences. The paper lists them: habit formation, where you get used to a standard of living and hate falling below it. Recursive preferences, like Epstein and Zin, which separate risk aversion from the willingness to move consumption over time. Rare disasters, from Rietz in 1988. Transaction costs.
+MEI: Still fails. So people tried to fix the preferences. The paper lists them: habit formation, where you get used to a standard of living and hate falling below it. One of those habit papers, from 1990, is by Constantinides himself, so this paper is his second attempt at curing the same disease. Recursive preferences, like Epstein and Zin, which separate risk aversion from the willingness to move consumption over time. Rare disasters, from Rietz in 1988. Transaction costs.
 
 JUAN: And the option on today's menu: heterogeneous consumers with incomplete insurance.
 
@@ -101,8 +105,6 @@ JUAN: That's depressing, but I get it. A buffer works for a flat tire, not for l
 
 MEI: Great analogy. The abstract summarizes the income shocks in three words: uninsurable, persistent, and heteroscedastic.
 
-JUAN: Heteroscedastic. My favourite word to mispronounce.
-
 MEI: It means the variance changes over time. Here, how risky your personal income is depends on the state of the economy. That will turn out to be crucial.
 
 ## The economy
@@ -127,19 +129,13 @@ JUAN: So consumption equals wages plus dividends. Fruit plus salary.
 
 MEI: Right. And here's a nice footnote. The authors cite Mankiw and Zeldes, 1991, and others, who found that only a small fraction of people hold any stocks at all. So they say: our consumers are the stockholders. The aggregate labour income in the model is the labour income of stockholders only.
 
-JUAN: Respect for the footnote people.
+JUAN: Mankiw again, five years after his concentration paper. The man is everywhere.
 
 MEI: Now preferences. Everyone has the same utility function: power utility, also called constant relative risk aversion. Two parameters. Alpha is the risk aversion coefficient, and rho is the subjective discount rate, how impatient you are.
 
 JUAN: Same preferences for everyone. So the heterogeneity is only in income.
 
 MEI: Only in income. That's an important design choice. Nobody is a weird risk lover. People differ only because of what life throws at them.
-
-JUAN: Like twins separated at birth.
-
-MEI: And the timing of who is told what is careful. Consumers at time t know the aggregate history and also everyone's individual income history. The authors admit it's potentially objectionable to require each consumer to track the income of every other consumer. But they show the equilibrium is the same either way.
-
-JUAN: Good, because I can't even track my own income.
 
 ## Reverse engineering
 
@@ -170,8 +166,6 @@ MEI: Exactly. Bond prices too: a bond price is just the expected ratio of future
 JUAN: And any assumptions on the kernel?
 
 MEI: Two. The first is innocuous: as maturity goes to infinity, bond prices go to zero. A bond paying a dollar in a million years is worth almost nothing today.
-
-JUAN: Agreed. I don't value my million-years-from-now dollar.
 
 MEI: The second is the substantive one. They call it the pricing kernel condition. It says: the growth of the true kernel, from one period to the next, must be at least as large as the representative consumer's marginal rate of substitution. That marginal rate is the discount factor times aggregate consumption growth raised to minus alpha.
 
@@ -230,12 +224,6 @@ JUAN: And that's why they need the pricing kernel condition! If the gap were neg
 MEI: And a variance can't be negative. Exactly. That's the role of the condition.
 
 JUAN: I just felt something click. It was either my brain or my chair.
-
-MEI: One more detail. To make the law of large numbers work exactly in one economy, instead of a sequence of growing economies, they need some measure-theory construction for the set of consumers. They refer to a working paper by Green, 1989, rather than going into it.
-
-JUAN: The academic version of "trust me, bro."
-
-MEI: A very rigorous "trust me, bro."
 
 ## Proposition 1 and the no-trade equilibrium
 
@@ -333,8 +321,6 @@ JUAN: Does that mean ignoring heterogeneity always understates the premium?
 
 MEI: No, and this is a fun moment. Weil, in 1992, had a proposition saying that with power utility, an economist unaware of uninsurable risk would unambiguously understate the equity premium. Constantinides and Duffie say: this finding contradicts Weil. It can go either way, depending on the sign of the covariance between returns and the booster.
 
-JUAN: Academic beef! In a footnote-free sentence!
-
 MEI: Then the extreme example. Suppose aggregate consumption growth is a constant. Totally flat. In the representative model, the kernel is constant, so all assets earn the same expected return. No equity premium at all.
 
 JUAN: Because nothing covaries with a constant.
@@ -351,9 +337,7 @@ JUAN: Okay, now I have a worry. If everyone's share is a random walk, doesn't in
 
 MEI: Excellent worry, and the authors share it. Because shocks are permanent and independent across people, the cross-sectional distribution of income and consumption keeps spreading out. The variance grows, the Gini coefficient grows, forever.
 
-JUAN: The Gini coefficient, the inequality measure from zero to one.
-
-MEI: Right. And in the real world, inequality doesn't go to infinity. So in Section five and Appendix B, they fix it.
+MEI: And in the real world, inequality doesn't go to infinity. So in Section five and Appendix B, they fix it.
 
 JUAN: How?
 
@@ -375,10 +359,6 @@ JUAN: Any catch?
 
 MEI: A fun one in the appendix. The distribution can have a fat tail. Whether the variance is finite depends on how fast the kernel and consumption grow compared with the death rate. The bigger the idiosyncratic shocks, the higher the death probability you need to keep inequality finite.
 
-JUAN: So the more volatile life is, the more people need to die. That's the darkest sentence in finance.
-
-MEI: Let's move on before this becomes a philosophy podcast.
-
 ## Conclusion and legacy
 
 JUAN: How do the authors close?
@@ -396,6 +376,10 @@ MEI: The model handed researchers a clear test: measure the cross-sectional vari
 JUAN: So the inequality booster is real, but it doesn't solve everything.
 
 MEI: That's a fair summary. But the framework became the standard way to think about idiosyncratic risk and asset prices.
+
+MEI: And Duffie took his career toward the plumbing of markets. He sat on the board of Moody's, the credit rating agency, from 2008 to 2018, and chaired a Financial Stability Board group on reforming LIBOR, the benchmark interest rate.
+
+JUAN: From pricing kernels to fixing the world's most famous interest rate. Not bad.
 
 ## Wrap-up: the recap
 

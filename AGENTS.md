@@ -8,6 +8,9 @@ hosts, tone, structure, the 30-minute maximum, the accuracy and intellectual-pro
 
 Rules that always apply:
 
-- Never commit PDFs of papers. Link to them by DOI.
+- Never upload the paper. Papers are protected by copyright and belong to their authors and publishers. Do not
+  commit the paper in any format (PDF, Word, images, screenshots of tables or figures, or long excerpts). Link to it
+  by DOI instead.
 - Every number, quote and result in a script must come from the paper.
-- After adding an episode, update the learning paths and tables in `README.md`.
+- After adding an episode, remove its paper from `UPCOMING_EPISODES.md` and add the episode to the learning paths
+  and tables in `README.md`. Contributors follow the "How to contribute" section of the README.

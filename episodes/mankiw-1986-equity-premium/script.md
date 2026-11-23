@@ -10,7 +10,7 @@
 - **Paper:** Mankiw, N. G. (1986). The equity premium and the concentration of aggregate shocks. *Journal of Financial Economics*, 17(1), 211-219.
 - **Read the paper:** https://doi.org/10.1016/0304-405X(86)90012-7
 - **Topics:** Asset pricing; equity premium puzzle; incomplete markets
-- **Length:** 21 minutes
+- **Length:** 22 minutes
 - **Hosts:** Mei (the guide) and Juan (the student)
 
 ## Cold open
@@ -33,6 +33,18 @@ MEI: That one. Mankiw thanks him in the very first footnote. So imagine sending 
 
 JUAN: No pressure at all.
 
+MEI: And a sad footnote to that. Black died in 1995. Two years later, Myron Scholes and Robert Merton won the Nobel prize for option pricing, and the Nobel is never awarded after death.
+
+JUAN: Oof. Okay, and the author himself?
+
+MEI: When this paper was submitted, in 1985, Mankiw was a 27-year-old assistant professor at Harvard. He had finished his PhD at MIT a year earlier, and his advisor was Stanley Fischer, who is also thanked in this paper.
+
+JUAN: Thanking your PhD advisor. Smart career move.
+
+MEI: And look at the rest of that list. Stanley Fischer later ran the Bank of Israel and became Vice Chair of the US Federal Reserve. Olivier Blanchard later became chief economist of the IMF. And David Romer was Mankiw's classmate at Princeton.
+
+JUAN: So this nine-page paper has a better guest list than my wedding.
+
 MEI: Here's the hook. Between 1929 and 1933, during the Great Depression, consumption per person in the United States fell by about twenty percent.
 
 JUAN: Twenty percent is huge.
@@ -47,7 +59,7 @@ MEI: And that question, who actually takes the hit, is the whole paper. By the e
 
 JUAN: Okay, but first, what problem is he trying to solve?
 
-MEI: The equity premium puzzle, from Mehra and Prescott in 1985. The equity premium is the extra return that stocks earn over safe assets like Treasury bills. In US data it's about six percent per year.
+MEI: The equity premium puzzle, from Mehra and Prescott in 1985. The equity premium is the extra return that stocks earn over safe assets like Treasury bills. In US data it's about six percent per year. Fun fact: Edward Prescott later won the Nobel prize, in 2004, though for his work on business cycles.
 
 JUAN: Six percent extra, every year, just for holding stocks. Why doesn't everyone just buy stocks?
 
@@ -68,6 +80,10 @@ MEI: Now, how do we measure how risky a stock is? Here's the key move of consump
 JUAN: Covariance. So, how much the stock's return and consumption go up and down together.
 
 MEI: Right. Mankiw starts from a relation derived by Grossman and Shiller in 1982, called the consumption-beta relation. It's a simple product. On one side you have the expected excess return of an asset. On the other side you have two ingredients multiplied together: risk aversion, and the covariance between the asset's return and the growth of aggregate consumption.
+
+JUAN: Shiller, as in Robert Shiller?
+
+MEI: The same. He shared the 2013 Nobel prize with Eugene Fama and Lars Hansen, and Hansen's tests of these consumption models are cited in this paper too.
 
 JUAN: And aggregate consumption is just everybody's spending added up.
 
@@ -99,8 +115,6 @@ JUAN: Simplest possible. I like this man already.
 
 MEI: There are two dates. Today, you choose your portfolio. Tomorrow, nature flips a fair coin and everyone consumes. Heads is the good state: consumption per person is at its normal level, which he calls mu. Tails is the bad state: consumption per person falls by a fraction he calls phi. If phi is five percent, the economy is five percent poorer in the bad state.
 
-JUAN: Got it. Heads, normal life. Tails, five percent poorer.
-
 MEI: Now the asset. Instead of stocks and bonds separately, he uses one portfolio: you borrow at the Treasury bill rate and buy equity. That's a long-short position. In the bad state it pays minus one, so you lose your dollar. In the good state it pays one plus pi, where pi is the premium, the reward for taking the risk.
 
 JUAN: So it's a bet. Lose a dollar if things go badly, win a dollar plus a bonus if things go well.
@@ -117,7 +131,7 @@ MEI: Marginal utility is how much extra happiness the next dollar gives you. Whe
 
 JUAN: So weighting by marginal utility means dollars in bad times count for more.
 
-MEI: Exactly. And the condition says that, in equilibrium, once you weight each state's payoff by how much a dollar matters in that state, the bet is neither attractive nor unattractive. If it were attractive, you'd buy more of it. If it were unattractive, you'd sell it. People keep trading until they're indifferent at the margin.
+MEI: Exactly. In equilibrium, once each state's payoff is weighted that way, the bet is neither attractive nor unattractive. Otherwise people would keep buying or selling it.
 
 JUAN: So pi has to be big enough that the bonus in good times, when dollars matter little, makes up for the loss in bad times, when dollars matter a lot.
 
@@ -167,7 +181,7 @@ MEI: He answers that in the conclusion: moral hazard and adverse selection. Mora
 
 JUAN: So the insurer goes broke and the market vanishes.
 
-MEI: Pretty much. Now, what changes in the math? Each person still has the same first-order condition, but the bad state now has two branches. With probability one minus lambda you're fine, and with probability lambda you get hammered. So the new premium formula is lambda, times the gap between your marginal utility when you get hammered and your normal marginal utility, divided by your normal marginal utility.
+MEI: Pretty much. In the math, the bad state now has two branches: you're fine with probability one minus lambda, and hammered with probability lambda. The premium becomes lambda, times the extra marginal utility when you're hammered, relative to your normal marginal utility.
 
 JUAN: In human words, please.
 
@@ -211,7 +225,7 @@ MEI: Exactly. Averages lie. The average of everyone's marginal utilities is high
 
 JUAN: I remember the name. Vaguely. With fear.
 
-MEI: The proof is short. He differentiates the premium with respect to lambda and shows that the derivative is negative. So the premium falls as the shock gets spread more widely, and it rises as the shock gets more concentrated. He writes that derivative as an integral of the third derivative of utility, so its sign comes straight from the sign of the third derivative.
+MEI: The proof is short: the derivative of the premium with respect to lambda is negative whenever the third derivative is positive. More spreading, lower premium. More concentration, higher premium.
 
 JUAN: And the implication?
 
@@ -253,37 +267,21 @@ MEI: Now concentrate it more: only ten percent of people are hit, and each loses
 
 JUAN: Seventeen and a half times! That's not a rounding error.
 
-MEI: Notice how the two forces compound. The ratio rises with concentration and with risk aversion together, because higher risk aversion makes marginal utility more curved.
-
-JUAN: So moderate risk aversion plus concentrated pain gets you a big premium.
-
 MEI: But Mankiw is honest about it. He says the model is "too stylized to draw firm empirical conclusions." The table just shows that the effect can be large.
 
 ## The intuition section
 
 JUAN: There's a section three, right? The "intuitive" one?
 
-MEI: Yes. He drops the two-state setup and goes general. He takes each person's first-order condition and approximates marginal utility around average consumption with a second-order Taylor expansion.
+MEI: Yes. He goes general. He approximates each person's marginal utility around average consumption with a second-order Taylor expansion, a straight line plus a little bend, and adds up across everybody. The expected excess return splits into three terms.
 
-JUAN: Taylor expansion: approximate a curve by a straight line, plus a little bit of bend.
+JUAN: Walk me through them, quickly.
 
-MEI: Exactly. The second derivative of utility gives the slope of marginal utility, and the third derivative gives its bend. Then he adds up these conditions across everybody, and the expected excess return splits into three terms.
+MEI: First, the covariance of the return with average consumption, scaled by risk aversion. That's the textbook consumption CAPM. Second, from the third derivative, how the return moves with big swings in average consumption, a kind of coskewness. Third, the new one, also from the third derivative: how the return moves with the dispersion of individual consumption around the average. If an asset pays badly when consumption is very spread out, it must earn more.
 
-JUAN: Three terms. Walk me through them.
+JUAN: And in the toy model, dispersion is high exactly in the bad state.
 
-MEI: The first term is the covariance of the return with average consumption, scaled by risk aversion. That's the standard consumption CAPM, the textbook part.
-
-JUAN: Okay, familiar.
-
-MEI: The second term comes from the third derivative. It's how the return moves with the squared swings of average consumption. Think of it as coskewness: does the asset do badly when the economy has big swings?
-
-JUAN: And the third?
-
-MEI: That's the new one, and it also comes from the third derivative. It's how the return moves with the dispersion of individual consumption around the average, which is the cross-sectional heterogeneity. If an asset pays badly when people's consumption is very spread out, it's riskier, and it must earn more.
-
-JUAN: And in the toy model, dispersion is high exactly in the bad state, when the portfolio pays minus one.
-
-MEI: Right, so that term pushes the premium up. And if utility is quadratic, the third derivative is zero and the last two terms vanish, which brings us straight back to proposition one. Mankiw adds that, in general, uninsurable individual risk could push the premium in either direction. It depends on whether dispersion is high in good times or in bad times.
+MEI: Right, so that term pushes the premium up. With quadratic utility the last two terms vanish, which is proposition one again. In general, Mankiw adds, uninsurable risk could push the premium either way, depending on when dispersion is high.
 
 ## What Mankiw concedes
 
@@ -295,6 +293,14 @@ JUAN: So the representative agent is a stunt double. Great for action scenes, bu
 
 MEI: And he leaves a research agenda: figure out when the approximation works and when it fails. Ten years later, Constantinides and Duffie, in 1996, build a full dynamic model on this idea, where the cross-sectional variance of consumption growth enters the pricing kernel directly.
 
+MEI: And Mankiw didn't drop the topic. In 1991, with Stephen Zeldes, he showed that only about a quarter of American families owned any stock at all. That paper comes back in our next episode.
+
+JUAN: And what happened to Mankiw himself?
+
+MEI: He wrote the textbook Principles of Economics, first published in 1997, with a record advance from the publisher of 1.4 million dollars. And from 2003 to 2005 he chaired the Council of Economic Advisers for President George W. Bush.
+
+JUAN: So the man behind my first-year textbook also wrote about who pays for recessions. I feel personally seen.
+
 ## Wrap-up: the recap
 
 JUAN: Okay, quick recap before we go. Give me the whole paper in one minute.
@@ -303,7 +309,7 @@ MEI: Deal. The question: can a reasonable risk aversion explain a six percent eq
 
 JUAN: And the method?
 
-MEI: A deliberately tiny model. Two dates, a fair coin, and a long-short portfolio of stocks against Treasury bills. In the bad state, the aggregate loss falls on only a fraction lambda of identical consumers, who cannot insure it. Mankiw compares each consumer's first-order condition with the representative consumer's, proves three propositions, and puts numbers on the gap in one table.
+MEI: A deliberately tiny model: two dates, a fair coin, and a long-short portfolio of stocks against Treasury bills. In the bad state, the loss falls on a fraction lambda of identical consumers who cannot insure it. He compares their first-order conditions with the representative consumer's, proves three propositions, and puts numbers on the gap.
 
 JUAN: Main takeaways?
 

@@ -91,7 +91,9 @@ Adapt the segments to the paper, but keep this order:
 
 - Explain the paper in your own words. Use only short quotes, and attribute each one to the authors.
 - Mention a few key numbers, but never reproduce whole tables, figures or long passages.
-- Never commit the paper's PDF. Link to it by DOI.
+- Never upload the paper. Papers are protected by copyright and belong to their authors and publishers. Do not
+  commit the paper in any format (PDF, Word, images, screenshots of tables or figures, or long excerpts). Link to it
+  by DOI instead.
 - Never suggest that the authors or the publisher endorse the episode.
 
 ## Script format
@@ -124,4 +126,5 @@ The first time, download the two model files listed at the top of `make_podcast.
 to it. The script prints the episode length when it finishes. If the length misses the target by more than about
 10%, or runs past 30 minutes, cut or add dialogue and render again. Then write the length into the script header.
 
-Finally, add the episode to `README.md`: a learning path if one fits, every relevant topic table, and the full list.
+Finally, move the paper from the upcoming list to the library: remove it from `UPCOMING_EPISODES.md`, and add
+the episode to `README.md` (a learning path if one fits, every relevant topic table, and the full list).
