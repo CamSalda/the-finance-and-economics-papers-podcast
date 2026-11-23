@@ -13,4 +13,4 @@ Rules that always apply:
   by DOI instead.
 - Every number, quote and result in a script must come from the paper.
 - After adding an episode, remove its paper from `UPCOMING_EPISODES.md` and add the episode to the learning paths
-  and tables in `README.md`. Contributors follow the "How to contribute" section of the README.
+  and tables in `EPISODES.md`. Contributors follow the "How to contribute" section of the README.
