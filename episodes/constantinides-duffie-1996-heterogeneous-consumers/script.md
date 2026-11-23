@@ -15,7 +15,7 @@
 
 ## Cold open and recap
 
-MEI: Welcome back to The Finance Papers Podcast, where we read finance papers so you have to read them a little less. I'm Mei.
+MEI: Welcome back to The Finance Papers Podcast, where we discuss the papers that shaped finance, to make reading them easier and more fun. I'm Mei.
 
 MIGUEL: And I'm Miguel, still asking the questions you're too shy to ask. Last episode we did Mankiw 1986. Nine pages. I was very happy.
 

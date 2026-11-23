@@ -67,11 +67,12 @@ The listener is a finance student with technical training who is still learning.
 
 Adapt the segments to the paper, but keep this order:
 
-1. **Cold open.** The hosts introduce themselves. Right after, the guide reads the spoken educational notice
-   (see below). Then give the paper's citation and length, a fun fact, and a hook question. Keep the cold open
-   under about 2 minutes.
-   - **Intro (automatic).** The show's theme plays here, with the guide reading the tagline. Do not write it into
-     the script: `make_podcast.py` inserts it after the `## Cold open` section.
+0. **Intro (automatic).** Every episode starts with the show's theme, with the guide reading the tagline. Do not
+   write it into the script: `make_podcast.py` plays it before the first line.
+1. **Cold open.** The guide opens with "Welcome to The Finance Papers Podcast, where we discuss the papers that
+   shaped finance, to make reading them easier and more fun." ("Welcome back" from the second episode of a
+   series.) The hosts introduce themselves, and the guide reads the spoken educational notice (see below). Then give
+   the paper's citation and length, a fun fact, and a hook question. Keep the cold open under about 2 minutes.
 2. **The problem.** Explain what puzzle or question the paper answers and why earlier answers fell short.
 3. **The setup.** Walk through the model or data step by step, defining every ingredient.
 4. **The mechanics.** Go through each main result in turn, with a plain-words punchline for each.
@@ -116,8 +117,8 @@ Copy the header of an existing script and fill it in. It has, in order:
 2. The educational notice block quote, copied unchanged from an existing script.
 3. A list with the paper's full citation, the DOI link, the topics, the length and the hosts.
 
-Then use `##` headings for segments. The first segment must be `## Cold open`: the generator plays the show's
-theme and tagline right after it, and the theme with the closing credits after the last line. Do not write the
+Then use `##` headings for segments, starting with `## Cold open`. The generator plays the show's theme and
+tagline before the first line, and the theme with the closing credits after the last line. Do not write the
 tagline or the music credit into the script. Put each spoken turn on its own line as `NAME: text`, with the host's name in capitals
 (`MEI: text`, `MIGUEL: text`). Only those lines are spoken, so headings and notes stay silent.
 

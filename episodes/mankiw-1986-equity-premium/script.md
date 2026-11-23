@@ -15,7 +15,7 @@
 
 ## Cold open
 
-MEI: Welcome to The Finance Papers Podcast, where we read old finance papers so you don't have to. Well, so you have to a little less. I'm Mei.
+MEI: Welcome to The Finance Papers Podcast, where we discuss the papers that shaped finance, to make reading them easier and more fun. I'm Mei.
 
 MIGUEL: And I'm Miguel. I'm the one who asks the questions you're too embarrassed to ask in class.
 

@@ -9,8 +9,8 @@ Only lines of the form "NAME: text" are spoken, with the host's name in capitals
 guide, the second is the student. By default the guide gets Kokoro's af_heart voice and the student Microsoft's
 en-US-AndrewNeural voice through edge-tts; to choose
 others, add a header line such as "- **Voices:** ANA=af_bella, PEDRO=am_adam". The guide also reads the tagline and
-the closing line. The episode is assembled as: the cold open (the first ## section), the theme with the tagline,
-the rest of the script, and the theme with the closing line.
+the closing line. The episode is assembled as: the theme with the tagline, the whole script, and the theme with the
+closing line.
 """
 
 import asyncio
@@ -95,18 +95,16 @@ def over_theme(voice, theme, sample_rate, lead=3.0, tail=3.0, duck=0.2):
 
 def main(script_path, mp3_path):
     text = Path(script_path).read_text(encoding="utf-8")
-    cold_open, rest = re.split(r"^## (?!Cold open).*$", text[text.index("## Cold open"):], maxsplit=1, flags=re.M)
     voices = voices_for(text)
     guide = next(iter(voices))
     kokoro = Kokoro(str(MODELS / "kokoro-v1.0.onnx"), str(MODELS / "voices-v1.0.bin"))
 
-    opening, sample_rate = speak(kokoro, TURN.findall(cold_open), voices)
-    body, _ = speak(kokoro, TURN.findall(rest), voices)
+    episode, sample_rate = speak(kokoro, TURN.findall(text), voices)
     music, music_rate = soundfile.read(THEME)
     theme = 0.5 * resample_poly(music.mean(axis=1), sample_rate, music_rate)
     intro = over_theme(speak(kokoro, [(guide, TAGLINE)], voices)[0], theme, sample_rate)
     outro = over_theme(speak(kokoro, [(guide, CLOSING)], voices)[0], theme, sample_rate)
-    audio = np.concatenate([opening, intro, body, outro])
+    audio = np.concatenate([intro, episode, outro])
     pcm = (np.clip(audio, -1, 1) * 32767).astype(np.int16)
 
     encoder = lameenc.Encoder()

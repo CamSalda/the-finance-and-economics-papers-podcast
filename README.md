@@ -26,11 +26,11 @@ listener is a finance student with some technical training who is still learning
 the authors, their academic connections and the papers around each one. Every episode comes with its
 full script, which doubles as a transcript. Episodes last at most 30 minutes.
 
-Every episode has the same shape: a short cold open, then the show's theme with the tagline "The Finance Papers
-Podcast. Research in finance. A free, open-source educational project in which we discuss and explain classical
-papers and current research in finance.", then the episode, which always closes with a
-one-minute recap of the paper's question, method, main takeaways and conclusions, and the theme again at the end. The generator adds the
-theme automatically.
+Every episode has the same shape. It opens with the show's theme and the tagline "The Finance Papers Podcast.
+Research in finance. A free, open-source educational project in which we discuss and explain classical papers and
+current research in finance." Then come a short cold open, the episode, and a one-minute recap of the paper's
+question, method, main takeaways and conclusions. The theme returns at the end. The generator adds the theme
+automatically.
 
 Mei and Miguel are the default hosts. If you add an episode, you are invited to host it under your own names: see
 [How to contribute](#how-to-contribute).
