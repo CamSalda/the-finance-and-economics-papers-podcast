@@ -1,0 +1,5 @@
+# Papers are copyrighted: link to them by DOI, never commit them.
+*.pdf
+
+# Voice model weights, downloaded locally (see make_podcast.py).
+.agents/skills/paper-to-podcast/models/
