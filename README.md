@@ -19,7 +19,7 @@ papers in finance that we plan to cover. Pick one and contribute it!
 Two hosts walk through one paper step by step:
 
 - **Mei, the guide**, knows the paper inside out and explains every technical term as it comes up.
-- **Juan, the student**, asks the questions you would ask, restates ideas in his own words, and brings the jokes.
+- **Miguel, the student**, asks the questions you would ask, restates ideas in his own words, and brings the jokes.
 
 Nobody reads equations aloud: the hosts describe what each equation contains and why it matters. The target
 listener is a finance student with some technical training who is still learning. Along the way, the hosts share interesting facts about
@@ -32,7 +32,7 @@ papers and current research in finance.", then the episode, which always closes 
 one-minute recap of the paper's question, method, main takeaways and conclusions, and the theme again at the end. The generator adds the
 theme automatically.
 
-Mei and Juan are the default hosts. If you add an episode, you are invited to host it under your own names: see
+Mei and Miguel are the default hosts. If you add an episode, you are invited to host it under your own names: see
 [How to contribute](#how-to-contribute).
 
 ## Repository layout
@@ -65,7 +65,7 @@ finance.
 ### Ways to contribute
 
 - **Make an episode.** Pick a paper from [Upcoming episodes](UPCOMING_EPISODES.md) and turn it into an episode.
-  You are welcome to host it yourself: replace Mei and Juan with your own names and a friend's.
+  You are welcome to host it yourself: replace Mei and Miguel with your own names and a friend's.
 - **Suggest a paper.** Open an issue proposing a paper for the upcoming list, with its full citation and a line on
   why it matters.
 - **Review an episode.** Listen to an episode or read a script and report errors, unclear explanations or bad jokes
@@ -111,7 +111,7 @@ finance.
    cold open. Start the script with a `## Cold open` section and do not write the intro or outro yourself.
 
    **Personalize the hosts.** We invite you to put your own names on your episode. Write `ANA:` and `PEDRO:` instead
-   of `MEI:` and `JUAN:`, keeping the two roles: the first host to speak is the guide, the second the student. To pick
+   of `MEI:` and `MIGUEL:`, keeping the two roles: the first host to speak is the guide, the second the student. To pick
    the voices, add a line such as `- **Voices:** ANA=af_bella, PEDRO=am_adam` to the script header.
 6. Render the audio. The first time, download the two voice model files listed at the top of
    [make_podcast.py](.agents/skills/paper-to-podcast/make_podcast.py) into the `models/` folder next to it.
@@ -119,7 +119,7 @@ finance.
    license requires.
 
    ```
-   pip install kokoro-onnx lameenc scipy
+   pip install kokoro-onnx edge-tts lameenc scipy
    python .agents/skills/paper-to-podcast/make_podcast.py episodes/<slug>/script.md episodes/<slug>/episode.mp3
    ```
 
@@ -174,8 +174,10 @@ This project respects the rights of authors and publishers.
 
 ## About the audio
 
-The voices are generated with [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M), an open-weight text-to-speech
-model released under the Apache 2.0 license.
+Mei's voice is generated with [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M), an open-weight text-to-speech
+model released under the Apache 2.0 license. Miguel's voice is Microsoft's Andrew neural voice, generated through
+the open-source [edge-tts](https://github.com/rany2/edge-tts) package. Microsoft does not publish explicit terms for
+redistributing audio from this service. If Microsoft objects, we will re-render the episodes with an open voice.
 
 The theme music is [JASM HEART](https://freesound.org/people/MadGravityStudio/sounds/834509/) by MadGravityStudio,
 licensed under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). It is used
