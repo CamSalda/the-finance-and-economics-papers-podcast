@@ -3,3 +3,6 @@
 
 # Voice model weights, downloaded locally (see make_podcast.py).
 .agents/skills/paper-to-podcast/models/
+
+# Python caches
+__pycache__/
