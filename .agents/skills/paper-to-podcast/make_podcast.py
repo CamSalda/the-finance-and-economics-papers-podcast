@@ -35,6 +35,8 @@ REFERENCE_VOICES = REPO / "assets" / "voices"
 DEFAULT_VOICES = ("af_heart", "qwen:miguel")
 SAMPLE_RATE = 24000
 TURN_LOUDNESS = 0.08
+MUSIC_LOUDNESS = 0.10
+MUSIC_UNDER_VOICE = 0.38
 TURN = re.compile(r"^([A-ZÀ-Ý]+): (.+)$", re.M)
 KOKORO_SPEED = 1.1
 PAUSE_SECONDS = 0.3
@@ -48,8 +50,8 @@ TAGLINE = (
     "papers and current research in finance."
 )
 CLOSING = (
-    "You've been listening to The Finance Papers Podcast. The original paper, the full script, and a guide to "
-    "contribute your own episode are on GitHub. Music: JASM HEART, by MadGravityStudio, under a Creative Commons "
+    "You've been listening to The Finance Papers Podcast. The link to the original paper, the full script, and a "
+    "guide to contribute your own episode are on GitHub. Music: JASM HEART, by MadGravityStudio, under a Creative Commons "
     "Attribution license."
 )
 
@@ -110,7 +112,7 @@ def speak(engines, turns, voices):
     return np.concatenate(audio), SAMPLE_RATE
 
 
-def over_theme(voice, theme, sample_rate, lead=3.0, tail=3.0, duck=0.2):
+def over_theme(voice, theme, sample_rate, lead=3.0, tail=3.0, duck=MUSIC_UNDER_VOICE):
     """Play the theme alone for `lead` seconds, lower it under the voice, then bring it back and fade it out."""
     voice_start, voice_end = lead, lead + len(voice) / sample_rate
     total = voice_end + tail
@@ -132,7 +134,8 @@ def main(script_path, mp3_path):
 
     episode, sample_rate = speak(engines, TURN.findall(text), voices)
     music, music_rate = soundfile.read(THEME)
-    theme = 0.5 * resample_poly(music.mean(axis=1), sample_rate, music_rate)
+    theme = resample_poly(music.mean(axis=1), sample_rate, music_rate)
+    theme = np.tanh(theme * MUSIC_LOUDNESS / np.sqrt(np.mean(theme**2)))  # soft limiter on the loudest peaks
     intro = over_theme(speak(engines, [(guide, TAGLINE)], voices)[0], theme, sample_rate)
     outro = over_theme(speak(engines, [(guide, CLOSING)], voices)[0], theme, sample_rate)
     audio = np.concatenate([intro, episode, outro])
