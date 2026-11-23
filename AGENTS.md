@@ -8,6 +8,11 @@ hosts, tone, structure, the 30-minute maximum, the accuracy and intellectual-pro
 
 Rules that always apply:
 
+- Every episode opens and closes with the show's theme, which carries the tagline and the music credit. Always render
+  with `.agents/skills/paper-to-podcast/make_podcast.py`, which adds both, and start every script with a
+  `## Cold open` section. Never write the tagline or the music credit into a script.
+- The default hosts are Mei (the guide) and Juan (the student). Contributors may host their own episodes under their
+  own names; keep the two roles.
 - Never upload the paper. Papers are protected by copyright and belong to their authors and publishers. Do not
   commit the paper in any format (PDF, Word, images, screenshots of tables or figures, or long excerpts). Link to it
   by DOI instead.

@@ -24,8 +24,8 @@ Ask the user only for what you cannot default.
 | Slug | Author surnames (up to two, else first author plus `etal`), year, and two or three keywords: `mankiw-1986-equity-premium`. |
 
 Length rule: about 2 minutes per page of main text, between 12 minutes and a hard maximum of 30 minutes. If a paper
-needs more, cut to its core results rather than exceed 30 minutes. The voices speak about 165 words per
-minute, so target words = minutes x 165.
+needs more, cut to its core results rather than exceed 30 minutes. The voices speak about 150 words per
+minute, so target words = minutes x 150. The intro and outro add about one minute, which counts toward the 30.
 
 ## The hosts
 
@@ -35,6 +35,13 @@ minute, so target words = minutes x 165.
   please"), restates ideas in his own words, pushes back, and brings most of the jokes and analogies.
 
 Keep this dynamic. Mei explains, Juan checks understanding by paraphrasing, and Mei confirms or corrects.
+
+**Host your own episode.** Mei and Juan are the default hosts. Contributors are invited to replace them with their
+own names in the episodes they add, for example `ANA:` and `PEDRO:`. Keep the two roles: the first host to speak is
+the guide and the second is the student. The guide's voice is female and the student's male by default. To choose
+other voices, add a line `- **Voices:** ANA=af_bella, PEDRO=am_adam` to the header, using any Kokoro voice name
+(for example `af_heart`, `af_bella`, `af_nicole`, `am_michael`, `am_adam`, `bf_emma`, `bm_george`). Ask the user which
+names to use; default to Mei and Juan.
 
 ## Audience and tone
 
@@ -60,8 +67,11 @@ The listener is a finance student with technical training who is still learning.
 
 Adapt the segments to the paper, but keep this order:
 
-1. **Cold open.** Mei and Juan introduce themselves. Right after, Mei reads the spoken educational notice
-   (see below). Then give the paper's citation and length, a fun fact, and a hook question.
+1. **Cold open.** The hosts introduce themselves. Right after, the guide reads the spoken educational notice
+   (see below). Then give the paper's citation and length, a fun fact, and a hook question. Keep the cold open
+   under about 2 minutes.
+   - **Intro (automatic).** The show's theme plays here, with the guide reading the tagline. Do not write it into
+     the script: `make_podcast.py` inserts it after the `## Cold open` section.
 2. **The problem.** Explain what puzzle or question the paper answers and why earlier answers fell short.
 3. **The setup.** Walk through the model or data step by step, defining every ingredient.
 4. **The mechanics.** Go through each main result in turn, with a plain-words punchline for each.
@@ -73,6 +83,8 @@ Adapt the segments to the paper, but keep this order:
    theoretical strategy), the main takeaways (two or three results, with the key numbers), and the conclusion
    (what the authors conclude and the main limit). Then Juan closes with a joke, and both say goodbye. Name the
    segment `## Wrap-up: the recap`.
+   - **Outro (automatic).** The theme returns with the closing line and the music credit, which the theme's
+     CC BY license requires. `make_podcast.py` adds it after the last line.
 
 ## Accuracy
 
@@ -106,16 +118,17 @@ Copy the header of an existing script and fill it in. It has, in order:
 
 Then use `##` headings for segments. The first segment must be `## Cold open`: the generator plays the show's
 theme and tagline right after it, and the theme with the closing credits after the last line. Do not write the
-tagline or the music credit into the script. Put each spoken turn on its own line as `MEI: text` or `JUAN: text`. Only
-those lines are spoken, so headings and notes stay silent.
+tagline or the music credit into the script. Put each spoken turn on its own line as `NAME: text`, with the host's name in capitals
+(`MEI: text`, `JUAN: text`). Only those lines are spoken, so headings and notes stay silent.
 
-The spoken notice in the cold open is also copied unchanged from an existing script. It starts with
-"MEI: Quick note before we start. This is an open-source, educational project."
+The spoken notice in the cold open is also copied unchanged from an existing script, spoken by the guide. It starts
+with "Quick note before we start. This is an open-source, educational project."
 
 ## Render the audio
 
-The voices come from Kokoro, an open-weight model under the Apache 2.0 license. Mei uses `af_heart` and Juan
-uses `am_michael`.
+The voices come from Kokoro, an open-weight model under the Apache 2.0 license. By default the guide uses
+`af_heart` and the student uses `am_michael`. Always render with `make_podcast.py`: it adds the intro and the outro,
+including the music credit that the theme's license requires.
 
 ```
 pip install kokoro-onnx lameenc scipy
