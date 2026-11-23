@@ -61,6 +61,9 @@ The listener is a finance student with technical training who is still learning.
   - **Related papers:** the papers this one answers or builds on, the papers that built on it, famous debates it
     started, and how it is cited or taught today.
   - **The story behind it:** the historical context, the publication history, and surprising footnotes.
+- Every episode must stand alone. Never refer to other episodes of the show ("last episode", "welcome back", "as we
+  saw before", "in our next episode"), because listeners hear episodes in any order. Mentioning related papers by
+  their authors and year is fine; mentioning our episodes of them is not.
 - Use no em-dashes. Write short spoken sentences.
 
 ## Episode structure
@@ -70,8 +73,7 @@ Adapt the segments to the paper, but keep this order:
 0. **Intro (automatic).** Every episode starts with the show's theme, with the guide reading the tagline. Do not
    write it into the script: `make_podcast.py` plays it before the first line.
 1. **Cold open.** The guide opens with "Welcome to The Finance Papers Podcast, where we discuss the papers that
-   shaped finance, to make reading them easier and more fun." ("Welcome back" from the second episode of a
-   series.) The hosts introduce themselves, and the guide reads the spoken educational notice (see below). Then give
+   shaped finance, to make reading them easier and more fun." The hosts introduce themselves, and the guide reads the spoken educational notice (see below). Then give
    the paper's citation and length, a fun fact, and a hook question. Keep the cold open under about 2 minutes.
 2. **The problem.** Explain what puzzle or question the paper answers and why earlier answers fell short.
 3. **The setup.** Walk through the model or data step by step, defining every ingredient.

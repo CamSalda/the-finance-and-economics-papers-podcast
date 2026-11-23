@@ -15,7 +15,7 @@
 
 ## Cold open
 
-MEI: Welcome back to The Finance Papers Podcast, where we discuss the papers that shaped finance, to make reading them easier and more fun. I'm Mei.
+MEI: Welcome to The Finance Papers Podcast, where we discuss the papers that shaped finance, to make reading them easier and more fun. I'm Mei.
 
 MIGUEL: And I'm Miguel, still asking the questions you're too embarrassed to ask in class.
 
@@ -23,11 +23,11 @@ MEI: Quick note before we start. This is an open-source, educational project. We
 
 MEI: Today is a special one. Rajnish Mehra and Edward Prescott, "The equity premium: A puzzle," Journal of Monetary Economics, 1985. Seventeen pages.
 
-MIGUEL: Wait. We've already done two episodes about solutions to the equity premium puzzle. Mankiw, and Constantinides and Duffie. And only now we do the paper that started it?
+MIGUEL: The equity premium puzzle. I've heard that name in every asset pricing class.
 
-MEI: Yes. We watched the sequels before the original.
+MEI: And this is where the name comes from. Mankiw in 1986, Constantinides and Duffie in 1996, and many other papers are attempts to solve the puzzle these two set.
 
-MIGUEL: Like watching Star Wars starting from episode four. Except here it's finance, so it's episode zero.
+MIGUEL: So it's the origin story. The first movie that every sequel copies.
 
 MEI: And it's worth it. Here's the hook. Over ninety years, from 1889 to 1978, American stocks paid a real return of about seven percent a year. Safe short-term debt paid less than one percent. Mehra and Prescott ask a simple question: can a standard economic model explain that gap?
 
@@ -47,7 +47,7 @@ MIGUEL: Six years. I get impatient when a referee takes six weeks.
 
 MEI: Then look at who they thank: George Constantinides, Eugene Fama, Merton Miller, Fischer Black, Stephen LeRoy and Charles Plosser.
 
-MIGUEL: Fischer Black again! He's in every episode. He's the Stan Lee of finance papers.
+MIGUEL: Fischer Black, as in Black-Scholes? He's like the Stan Lee of finance: he makes a cameo everywhere.
 
 MEI: He even shows up in a second footnote, which we'll get to. And remember Constantinides in that list. He matters at the end.
 
@@ -169,7 +169,7 @@ MEI: The model misses by a factor of about seventeen. And notice how they reject
 
 MIGUEL: So it's not "statistically rejected at five percent." It's "not even in the same building."
 
-MEI: That's the style. And the intuition is what we heard in the Mankiw episode. Consumption is too smooth. Stocks move with consumption, but consumption barely moves, so stocks don't look risky enough to deserve six percent. To get there, you need a crazy alpha.
+MEI: That's the style. And the intuition is simple. Consumption is too smooth. Stocks move with consumption, but consumption barely moves, so stocks don't look risky enough to deserve six percent. To get there, you need a crazy alpha.
 
 ## The other puzzle: the risk-free rate
 
@@ -251,7 +251,7 @@ MIGUEL: Wait. Constantinides? As in Constantinides and Duffie, who solved it wit
 
 MEI: The same. Eleven years later, Constantinides and Duffie showed that heterogeneity can matter a lot, when income shocks are uninsurable and persistent.
 
-MIGUEL: Plot twist. Episode three wins the argument against episode one.
+MIGUEL: Plot twist. The author they cite to doubt heterogeneity later co-wrote the paper that rescued it.
 
 MEI: But read the next sentences, because Mehra and Prescott point to the right road. They suggest that some trades between people may be impossible. In that case, individual consumption can vary a lot while aggregate consumption barely moves. They mention contracts that can't be enforced, and the fact that you can't sign contracts with generations not yet born.
 
@@ -285,10 +285,10 @@ MEI: One: the model's largest premium is 0.35 percent, against 6.18 percent in t
 
 MIGUEL: And the conclusion?
 
-MEI: Most likely, the model that explains the equity premium is not a frictionless Arrow-Debreu economy. Missing markets and contracts that can't be enforced are the suspects. That set the agenda for the papers we covered in the earlier episodes.
+MEI: Most likely, the model that explains the equity premium is not a frictionless Arrow-Debreu economy. Missing markets and contracts that can't be enforced are the suspects. That set the agenda for the next decade of research, from Mankiw in 1986 to Constantinides and Duffie in 1996.
 
 MIGUEL: And my takeaway: six percent is a lot. If your model can only give me 0.35, check your model, not the data.
 
 MEI: Thanks for listening to The Finance Papers Podcast.
 
-MIGUEL: See you next time. And if you skipped the sequels, now you're ready for them.
+MIGUEL: See you next time. And remember: six percent is not a rounding error.

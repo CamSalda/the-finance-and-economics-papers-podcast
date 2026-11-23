@@ -149,6 +149,8 @@ Before you submit your pull request, check that your episode meets these guideli
 
 - [ ] The issue that claims the paper is referenced in the pull request description.
 - [ ] The episode lasts 30 minutes or less.
+- [ ] The episode stands alone: it never refers to other episodes of the show, since listeners hear them in any
+      order.
 - [ ] The episode closes with the recap: question, method, main takeaways and conclusion.
 - [ ] Every number, quote and result in the script comes from the paper.
 - [ ] Every fact from outside the paper, such as facts about the authors or related papers, is verified, and its
