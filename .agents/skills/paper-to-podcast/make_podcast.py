@@ -57,9 +57,16 @@ def voices_for(script):
     return voices
 
 
-async def edge_mp3(text, voice):
-    stream = edge_tts.Communicate(text, voice, rate=EDGE_RATE).stream()
-    return b"".join([chunk["data"] async for chunk in stream if chunk["type"] == "audio"])
+async def edge_mp3(text, voice, attempts=4):
+    """Fetch one line from Microsoft's online service, retrying because it sometimes drops a request."""
+    for attempt in range(attempts):
+        try:
+            stream = edge_tts.Communicate(text, voice, rate=EDGE_RATE).stream()
+            return b"".join([chunk["data"] async for chunk in stream if chunk["type"] == "audio"])
+        except edge_tts.exceptions.EdgeTTSException:
+            if attempt == attempts - 1:
+                raise
+            await asyncio.sleep(2 ** attempt)
 
 
 def synthesize(kokoro, text, voice):

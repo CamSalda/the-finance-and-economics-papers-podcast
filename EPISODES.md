@@ -9,7 +9,8 @@ New to a topic? Start with a path. Each one is a short playlist in the order tha
 
 **The equity premium puzzle and heterogeneous consumers**
 
-1. Mehra and Prescott (1985), *The equity premium: A puzzle*. The puzzle itself. *Episode wanted: contribute it!*
+1. [Mehra and Prescott (1985)](episodes/mehra-prescott-1985-equity-premium-puzzle/): the puzzle itself. A standard model can't explain why stocks beat
+   safe debt by six percent a year.
 2. [Mankiw (1986)](episodes/mankiw-1986-equity-premium/): who bears a recession matters for asset prices.
 3. [Constantinides and Duffie (1996)](episodes/constantinides-duffie-1996-heterogeneous-consumers/): the same
    idea in a full dynamic model, where consumption inequality enters the pricing kernel.
@@ -25,6 +26,7 @@ A paper can appear under more than one topic.
 
 | Paper | Episode | Length |
 |-------|---------|--------|
+| Mehra and Prescott (1985) | [Six percent too many](episodes/mehra-prescott-1985-equity-premium-puzzle/) | 21 min |
 | Mankiw (1986) | [Who pays for the recession?](episodes/mankiw-1986-equity-premium/) | 22 min |
 | Constantinides and Duffie (1996) | [The inequality factor](episodes/constantinides-duffie-1996-heterogeneous-consumers/) | 30 min |
 
@@ -39,6 +41,7 @@ A paper can appear under more than one topic.
 
 | Year | Paper | Journal | Length | Listen | Script | Read the paper |
 |------|-------|---------|--------|--------|--------|----------------|
+| 1985 | Mehra and Prescott, *The equity premium: A puzzle* | Journal of Monetary Economics | 21 min | [MP3](episodes/mehra-prescott-1985-equity-premium-puzzle/episode.mp3) | [Script](episodes/mehra-prescott-1985-equity-premium-puzzle/script.md) | [DOI](https://doi.org/10.1016/0304-3932(85)90061-3) |
 | 1986 | Mankiw, *The equity premium and the concentration of aggregate shocks* | Journal of Financial Economics | 22 min | [MP3](episodes/mankiw-1986-equity-premium/episode.mp3) | [Script](episodes/mankiw-1986-equity-premium/script.md) | [DOI](https://doi.org/10.1016/0304-405X(86)90012-7) |
 | 1996 | Constantinides and Duffie, *Asset pricing with heterogeneous consumers* | Journal of Political Economy | 30 min | [MP3](episodes/constantinides-duffie-1996-heterogeneous-consumers/episode.mp3) | [Script](episodes/constantinides-duffie-1996-heterogeneous-consumers/script.md) | [DOI](https://doi.org/10.1086/262023) |
 
