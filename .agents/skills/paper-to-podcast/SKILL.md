@@ -127,4 +127,4 @@ to it. The script prints the episode length when it finishes. If the length miss
 10%, or runs past 30 minutes, cut or add dialogue and render again. Then write the length into the script header.
 
 Finally, move the paper from the upcoming list to the library: remove it from `UPCOMING_EPISODES.md`, and add
-the episode to `README.md` (a learning path if one fits, every relevant topic table, and the full list).
+the episode to `EPISODES.md` (a learning path if one fits, every relevant topic table, and the full list).

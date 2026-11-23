@@ -26,50 +26,16 @@ papers and current research in finance.", then the episode, which always closes 
 one-minute recap of the paper's question, method, main takeaways and conclusions, and the theme again at the end. The generator adds the
 theme automatically.
 
-## Learning paths
+## Episodes
 
-New to a topic? Start with a path. Each one is a short playlist in the order that builds understanding.
-
-**The equity premium puzzle and heterogeneous consumers**
-
-1. Mehra and Prescott (1985), *The equity premium: A puzzle*. The puzzle itself. *Episode wanted: contribute it!*
-2. [Mankiw (1986)](episodes/mankiw-1986-equity-premium/): who bears a recession matters for asset prices.
-3. [Constantinides and Duffie (1996)](episodes/constantinides-duffie-1996-heterogeneous-consumers/): the same
-   idea in a full dynamic model, where consumption inequality enters the pricing kernel.
-
-Coming next: [Upcoming episodes](UPCOMING_EPISODES.md) lists more than fifty landmark papers in finance that we
-plan to cover, in APA format. Pick one and contribute it!
-
-## Episodes by topic
-
-A paper can appear under more than one topic.
-
-### Asset pricing
-
-| Paper | Episode | Length |
-|-------|---------|--------|
-| Mankiw (1986) | [Who pays for the recession?](episodes/mankiw-1986-equity-premium/) | 22 min |
-| Constantinides and Duffie (1996) | [The inequality factor](episodes/constantinides-duffie-1996-heterogeneous-consumers/) | 30 min |
-
-### Incomplete markets and heterogeneous agents
-
-| Paper | Episode | Length |
-|-------|---------|--------|
-| Mankiw (1986) | [Who pays for the recession?](episodes/mankiw-1986-equity-premium/) | 22 min |
-| Constantinides and Duffie (1996) | [The inequality factor](episodes/constantinides-duffie-1996-heterogeneous-consumers/) | 30 min |
-
-## All episodes
-
-| Year | Paper | Journal | Length | Listen | Script | Read the paper |
-|------|-------|---------|--------|--------|--------|----------------|
-| 1986 | Mankiw, *The equity premium and the concentration of aggregate shocks* | Journal of Financial Economics | 22 min | [MP3](episodes/mankiw-1986-equity-premium/episode.mp3) | [Script](episodes/mankiw-1986-equity-premium/script.md) | [DOI](https://doi.org/10.1016/0304-405X(86)90012-7) |
-| 1996 | Constantinides and Duffie, *Asset pricing with heterogeneous consumers* | Journal of Political Economy | 30 min | [MP3](episodes/constantinides-duffie-1996-heterogeneous-consumers/episode.mp3) | [Script](episodes/constantinides-duffie-1996-heterogeneous-consumers/script.md) | [DOI](https://doi.org/10.1086/262023) |
-
-To listen, open an MP3 link and use the download button.
+Browse the library in [EPISODES.md](EPISODES.md): learning paths, episodes by topic, and the full list with scripts,
+audio and links to every paper. Coming next: [Upcoming episodes](UPCOMING_EPISODES.md) lists more than fifty landmark
+papers in finance that we plan to cover. Pick one and contribute it!
 
 ## Repository layout
 
 ```
+EPISODES.md            the library: every released episode
 AGENTS.md              instructions for AI agents (CLAUDE.md imports it)
 UPCOMING_EPISODES.md   landmark papers planned as future episodes
 episodes/
@@ -85,7 +51,7 @@ assets/
 
 All episodes sit in one flat folder, named by author surnames, year and two or three keywords, for example
 `mankiw-1986-equity-premium`. Folder names never change, so links never break. Topics, journals and years are
-handled by the tables above, where one paper can appear in several places.
+handled by the tables in [EPISODES.md](EPISODES.md), where one paper can appear in several places.
 
 ## How to contribute
 
@@ -149,12 +115,12 @@ finance.
 
 7. Move the paper from the upcoming list to the library:
    - **Remove** the paper from [UPCOMING_EPISODES.md](UPCOMING_EPISODES.md).
-   - **Add** the episode to the library in this README: a learning path if one fits, every relevant topic table, and
-     the full list of episodes.
+   - **Add** the episode to the library in [EPISODES.md](EPISODES.md): a learning path if one fits, every relevant
+     topic table, and the full list of episodes.
 8. Commit, sync with the latest version of this repository, and push:
 
    ```
-   git add episodes/<slug> README.md UPCOMING_EPISODES.md
+   git add episodes/<slug> EPISODES.md UPCOMING_EPISODES.md
    git commit -m "Add episode on <authors> (<year>)"
    git fetch upstream
    git rebase upstream/main
@@ -179,7 +145,7 @@ Before you submit your pull request, check that your episode meets these guideli
       source is listed in the pull request.
 - [ ] The script explains the paper in your own words. Quotes are short and attributed.
 - [ ] No PDF of the paper is committed. Link to it by DOI instead.
-- [ ] The paper is removed from [UPCOMING_EPISODES.md](UPCOMING_EPISODES.md) and added to the library in this README.
+- [ ] The paper is removed from [UPCOMING_EPISODES.md](UPCOMING_EPISODES.md) and added to [EPISODES.md](EPISODES.md).
 - [ ] You have listened to the whole episode at least once.
 
 ## Intellectual property

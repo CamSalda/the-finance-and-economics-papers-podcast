@@ -6,7 +6,7 @@ list for anyone learning finance.
 
 Want to make one of these episodes? Open an issue saying which paper you are working on, so two people don't make
 the same episode, then follow [How to contribute](README.md#how-to-contribute). When your episode is ready, your
-pull request removes the paper from this list and adds the episode to the library in the README.
+pull request removes the paper from this list and adds the episode to the library in [EPISODES.md](EPISODES.md).
 
 Papers already released are marked **Released**. Within each topic, papers are in chronological order. Citations
 follow APA style. Each was checked against Crossref, OpenAlex or RePEc; older *American Economic Review* articles
