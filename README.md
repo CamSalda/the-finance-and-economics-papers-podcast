@@ -8,6 +8,12 @@ The project is non-commercial. It is not affiliated with, sponsored by, or endor
 publisher of the papers discussed. Anyone can listen, reuse the material with attribution, and contribute new
 episodes.
 
+## Episodes
+
+Browse the library in [EPISODES.md](EPISODES.md): learning paths, episodes by topic, and the full list with scripts,
+audio and links to every paper. Coming next: [Upcoming episodes](UPCOMING_EPISODES.md) lists more than fifty landmark
+papers in finance that we plan to cover. Pick one and contribute it!
+
 ## How an episode works
 
 Two hosts walk through one paper step by step:
@@ -25,12 +31,6 @@ Podcast. Research in finance. A free, open-source educational project in which w
 papers and current research in finance.", then the episode, which always closes with a
 one-minute recap of the paper's question, method, main takeaways and conclusions, and the theme again at the end. The generator adds the
 theme automatically.
-
-## Episodes
-
-Browse the library in [EPISODES.md](EPISODES.md): learning paths, episodes by topic, and the full list with scripts,
-audio and links to every paper. Coming next: [Upcoming episodes](UPCOMING_EPISODES.md) lists more than fifty landmark
-papers in finance that we plan to cover. Pick one and contribute it!
 
 ## Repository layout
 
