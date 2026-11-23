@@ -39,8 +39,10 @@ Keep this dynamic. Mei explains, Miguel checks understanding by paraphrasing, an
 **Host your own episode.** Mei and Miguel are the default hosts. Contributors are invited to replace them with their
 own names in the episodes they add, for example `ANA:` and `PEDRO:`. Keep the two roles: the first host to speak is
 the guide and the second is the student. By default the guide has a female voice and the student a male one. To choose
-other voices, add a line `- **Voices:** ANA=af_bella, PEDRO=am_adam` to the header, using any Kokoro voice name
-(for example `af_heart`, `af_bella`, `af_nicole`, `am_michael`, `am_adam`, `bf_emma`, `bm_george`). Ask the user which
+other voices, add a line `- **Voices:** ANA=af_bella, PEDRO=qwen:pedro` to the header. A plain name is a Kokoro
+voice (for example `af_heart`, `af_bella`, `af_nicole`, `am_adam`, `bf_emma`, `bm_george`). `qwen:pedro` clones the
+reference clip `assets/voices/pedro.wav`, with its transcript in `assets/voices/pedro.txt`; never clone a real
+person's voice without their permission. Ask the user which
 names to use; default to Mei and Miguel.
 
 ## Audience and tone
@@ -61,6 +63,9 @@ The listener is a finance student with technical training who is still learning.
   - **Related papers:** the papers this one answers or builds on, the papers that built on it, famous debates it
     started, and how it is cited or taught today.
   - **The story behind it:** the historical context, the publication history, and surprising footnotes.
+- Every episode must stand alone. Never refer to other episodes of the show ("last episode", "welcome back", "as we
+  saw before", "in our next episode"), because listeners hear episodes in any order. Mentioning related papers by
+  their authors and year is fine; mentioning our episodes of them is not.
 - Use no em-dashes. Write short spoken sentences.
 
 ## Episode structure
@@ -70,8 +75,7 @@ Adapt the segments to the paper, but keep this order:
 0. **Intro (automatic).** Every episode starts with the show's theme, with the guide reading the tagline. Do not
    write it into the script: `make_podcast.py` plays it before the first line.
 1. **Cold open.** The guide opens with "Welcome to The Finance Papers Podcast, where we discuss the papers that
-   shaped finance, to make reading them easier and more fun." ("Welcome back" from the second episode of a
-   series.) The hosts introduce themselves, and the guide reads the spoken educational notice (see below). Then give
+   shaped finance, to make reading them easier and more fun." The hosts introduce themselves, and the guide reads the spoken educational notice (see below). Then give
    the paper's citation and length, a fun fact, and a hook question. Keep the cold open under about 2 minutes.
 2. **The problem.** Explain what puzzle or question the paper answers and why earlier answers fell short.
 3. **The setup.** Walk through the model or data step by step, defining every ingredient.
@@ -127,13 +131,36 @@ with "Quick note before we start. This is an open-source, educational project."
 
 ## Render the audio
 
-By default the guide uses `af_heart` from Kokoro, an open-weight model under the Apache 2.0 license, and the student
-uses Microsoft's `en-US-AndrewNeural` through the open-source edge-tts package. Voice names ending in `Neural` are
-Microsoft voices; all others are Kokoro voices. Always render with `make_podcast.py`: it adds the intro and the outro,
-including the music credit that the theme's license requires.
+We use two open-source text-to-speech models, both released under the Apache 2.0 license:
+
+- **[Kokoro](https://huggingface.co/hexgrad/Kokoro-82M)** voices Mei, with its `af_heart` voice. It is a small model
+  (82 million parameters) that runs on any computer. We use the
+  [kokoro-onnx](https://github.com/thewh1teagle/kokoro-onnx) version.
+- **[Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)** voices Miguel. Its
+  [Base model](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base) clones the reference clip
+  `assets/voices/miguel.wav`, a voice we created with Qwen3-TTS's preset speaker Aiden, so Miguel sounds the same
+  in every episode. His lines are sped up by 15% without changing pitch.
+
+Both voices are synthetic. Neither imitates a real person.
+
+Always render with `make_podcast.py`: it adds the intro and the outro, including the music credit that the
+theme's license requires.
+
+**A GPU is required.** Qwen3-TTS, which voices Miguel, needs an NVIDIA GPU with CUDA and about 8 GB of video
+memory. Kokoro, which voices Mei, runs on any computer, so an episode hosted only with Kokoro voices renders without
+a GPU.
+
+**Render time.** On a laptop with an NVIDIA RTX 4060 (8 GB), Miguel's lines take about 3 seconds of computing per
+second of audio, and Mei's about 0.3 seconds. A full 20 to 30 minute episode therefore takes roughly **25 to 45
+minutes** to render. Faster GPUs, or Linux with FlashAttention installed, shorten this. The first run also downloads
+the Qwen3-TTS model (about 4.5 GB).
+
+Tell the user about the GPU requirement and the expected render time before starting a render, and run the render
+in the background.
 
 ```
-pip install kokoro-onnx edge-tts lameenc scipy
+pip install torch --index-url https://download.pytorch.org/whl/cu124
+pip install kokoro-onnx qwen-tts audiotsm lameenc scipy
 python .agents/skills/paper-to-podcast/make_podcast.py episodes/<slug>/script.md episodes/<slug>/episode.mp3
 ```
 

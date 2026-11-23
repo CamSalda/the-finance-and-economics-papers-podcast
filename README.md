@@ -23,19 +23,21 @@ Two hosts walk through one paper step by step:
 - **Mei, the guide**, knows the paper inside out and explains every technical term as it comes up.
 - **Miguel, the student**, asks the questions you would ask, restates ideas in his own words, and brings the jokes.
 
-Nobody reads equations aloud: the hosts describe what each equation contains and why it matters. The target
-listener is a finance student with some technical training who is still learning. Along the way, the hosts share interesting facts about
-the authors, their academic connections and the papers around each one. Every episode comes with its
-full script, which doubles as a transcript. Episodes last at most 30 minutes.
+Nobody reads equations aloud: the hosts describe what each equation contains and why it matters. The target listener
+is a finance student with some technical training who is still learning. Along the way, the hosts share interesting
+facts about the authors, their academic connections and the papers around each one. Every episode lasts at most 30
+minutes, closes with a one-minute recap of the paper, and comes with its full script, which doubles as a transcript.
 
-Every episode has the same shape. It opens with the show's theme and the tagline "The Finance Papers Podcast.
-Research in finance. A free, open-source educational project in which we discuss and explain classical papers and
-current research in finance." Then come a short cold open, the episode, and a one-minute recap of the paper's
-question, method, main takeaways and conclusions. The theme returns at the end. The generator adds the theme
-automatically.
+## How the episodes are made
 
-Mei and Miguel are the default hosts. If you add an episode, you are invited to host it under your own names: see
-[How to contribute](#how-to-contribute).
+Each script explains the paper in our own words and is checked against the paper. Two open-source AI models, both
+released under the Apache 2.0 license, then turn the script into voices:
+
+- **[Kokoro](https://huggingface.co/hexgrad/Kokoro-82M)** voices Mei.
+- **[Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)** voices Miguel.
+
+Both voices are synthetic and imitate no real person. Qwen3-TTS needs an NVIDIA GPU, so rendering an episode
+requires one.
 
 ## Repository layout
 
@@ -49,6 +51,7 @@ episodes/
     episode.mp3    the rendered audio
 assets/
   theme-jasm-heart-madgravitystudio.mp3   the show's theme music (CC BY 4.0, see below)
+  voices/miguel.wav, voices/miguel.txt    Miguel's reference clip and its transcript
   graphical-identity.jpg                  the show's banner
 .agents/skills/paper-to-podcast/
   SKILL.md         instructions for turning a paper into an episode
@@ -87,6 +90,19 @@ finance.
 - **Say so if you stop.** If you cannot finish, leave a comment on the issue so someone else can take over.
   Inactive claims may be released after a while.
 
+### What every episode includes
+
+Every episode has the same shape:
+
+1. **Intro.** The show's theme, with the guide reading the tagline: "The Finance Papers Podcast. A free, open-source
+   educational project in which we discuss and explain classical papers and current research in finance."
+2. **Cold open.** The hosts introduce themselves and read the spoken educational notice.
+3. **The episode** itself.
+4. **Recap.** A one-minute summary of the paper's question, method, main takeaways and conclusions.
+5. **Outro.** The theme returns with the closing line and the music credit.
+
+The generator adds the intro and outro automatically, so never write them into a script.
+
 ### Make an episode, step by step
 
 1. Claim a paper from [Upcoming episodes](UPCOMING_EPISODES.md) by opening an issue, as above.
@@ -115,14 +131,22 @@ finance.
 
    **Personalize the hosts.** We invite you to put your own names on your episode. Write `ANA:` and `PEDRO:` instead
    of `MEI:` and `MIGUEL:`, keeping the two roles: the first host to speak is the guide, the second the student. To pick
-   the voices, add a line such as `- **Voices:** ANA=af_bella, PEDRO=am_adam` to the script header.
-6. Render the audio. The first time, download the two voice model files listed at the top of
+   the voices, add a line such as `- **Voices:** ANA=af_bella, PEDRO=qwen:pedro` to the script header. A name like
+   `af_bella` is a Kokoro voice. `qwen:pedro` clones a reference clip you add as `assets/voices/pedro.wav`, with its
+   transcript in `assets/voices/pedro.txt`. Use only a voice you created or have the right to use, never a recording
+   of a real person without their permission.
+6. Render the audio. Always use this script: it adds the show's intro and outro, including the music credit that
+   the theme's license requires. The first time, download the two Kokoro model files listed at the top of
    [make_podcast.py](.agents/skills/paper-to-podcast/make_podcast.py) into the `models/` folder next to it.
-   Always render with this script. It adds the show's intro and outro, including the music credit that the theme's
-   license requires.
+
+   **You need an NVIDIA GPU** with CUDA and about 8 GB of video memory, because Qwen3-TTS voices Miguel by cloning
+   his reference clip, `assets/voices/miguel.wav`. Kokoro, which voices Mei, runs on any computer, so an episode
+   hosted only with Kokoro voices renders without a GPU. On a laptop RTX 4060, a full 20 to 30 minute episode takes
+   roughly **25 to 45 minutes** to render, and the first run also downloads the Qwen3-TTS model (about 4.5 GB).
 
    ```
-   pip install kokoro-onnx edge-tts lameenc scipy
+   pip install torch --index-url https://download.pytorch.org/whl/cu124
+   pip install kokoro-onnx qwen-tts audiotsm lameenc scipy
    python .agents/skills/paper-to-podcast/make_podcast.py episodes/<slug>/script.md episodes/<slug>/episode.mp3
    ```
 
@@ -152,6 +176,8 @@ Before you submit your pull request, check that your episode meets these guideli
 
 - [ ] The issue that claims the paper is referenced in the pull request description.
 - [ ] The episode lasts 30 minutes or less.
+- [ ] The episode stands alone: it never refers to other episodes of the show, since listeners hear them in any
+      order.
 - [ ] The episode closes with the recap: question, method, main takeaways and conclusion.
 - [ ] Every number, quote and result in the script comes from the paper.
 - [ ] Every fact from outside the paper, such as facts about the authors or related papers, is verified, and its
@@ -175,12 +201,7 @@ This project respects the rights of authors and publishers.
 - **Takedown requests.** Authors or publishers who want an episode changed or removed can open an issue, and it
   will be handled promptly.
 
-## About the audio
-
-Mei's voice is generated with [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M), an open-weight text-to-speech
-model released under the Apache 2.0 license. Miguel's voice is Microsoft's Andrew neural voice, generated through
-the open-source [edge-tts](https://github.com/rany2/edge-tts) package. Microsoft does not publish explicit terms for
-redistributing audio from this service. If Microsoft objects, we will re-render the episodes with an open voice.
+## Music
 
 The theme music is [JASM HEART](https://freesound.org/people/MadGravityStudio/sounds/834509/) by MadGravityStudio,
 licensed under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). It is used
