@@ -1,5 +1,7 @@
 # The Finance Papers Podcast
 
+![The Finance Papers Podcast: analyzing the world of finance, one paper at a time](assets/graphical-identity.jpg)
+
 **The Finance Papers Podcast is a free, open-source, educational project.** Its only goal is to create and
 spread knowledge about research in finance. It turns academic papers into casual, pedagogical audio episodes, so
 that students, and anyone curious, can learn what the research says and then go read the papers themselves.
@@ -47,6 +49,7 @@ episodes/
     episode.mp3    the rendered audio
 assets/
   theme-jasm-heart-madgravitystudio.mp3   the show's theme music (CC BY 4.0, see below)
+  graphical-identity.jpg                  the show's banner
 .agents/skills/paper-to-podcast/
   SKILL.md         instructions for turning a paper into an episode
   make_podcast.py  renders a script into an MP3
