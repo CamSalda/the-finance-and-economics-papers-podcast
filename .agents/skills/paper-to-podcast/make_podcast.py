@@ -43,7 +43,7 @@ PAUSE_SECONDS = 0.3
 QWEN_MODEL = "Qwen/Qwen3-TTS-12Hz-1.7B-Base"
 QWEN_SAMPLING = dict(temperature=0.3, subtalker_temperature=0.3)
 QWEN_SEED = 1234
-QWEN_SPEED = 1.15
+QWEN_SPEED = 1.10
 QWEN_LOUDNESS = 1.2
 QWEN_PRONUNCIATIONS = {"Miguel": "Mi-GHEL"}
 TAGLINE = (

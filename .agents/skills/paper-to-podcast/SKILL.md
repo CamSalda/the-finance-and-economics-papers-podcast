@@ -139,7 +139,7 @@ We use two open-source text-to-speech models, both released under the Apache 2.0
 - **[Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)** voices Miguel. Its
   [Base model](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base) clones the reference clip
   `assets/voices/miguel.wav`, a voice we created with Qwen3-TTS's preset speaker Aiden, so Miguel sounds the same
-  in every episode. His lines are sped up by 15% without changing pitch.
+  in every episode. His lines are sped up by 10% without changing pitch.
 
 Both voices are synthetic. Neither imitates a real person.
 
