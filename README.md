@@ -32,6 +32,9 @@ papers and current research in finance.", then the episode, which always closes 
 one-minute recap of the paper's question, method, main takeaways and conclusions, and the theme again at the end. The generator adds the
 theme automatically.
 
+Mei and Juan are the default hosts. If you add an episode, you are invited to host it under your own names: see
+[How to contribute](#how-to-contribute).
+
 ## Repository layout
 
 ```
@@ -62,6 +65,7 @@ finance.
 ### Ways to contribute
 
 - **Make an episode.** Pick a paper from [Upcoming episodes](UPCOMING_EPISODES.md) and turn it into an episode.
+  You are welcome to host it yourself: replace Mei and Juan with your own names and a friend's.
 - **Suggest a paper.** Open an issue proposing a paper for the upcoming list, with its full citation and a line on
   why it matters.
 - **Review an episode.** Listen to an episode or read a script and report errors, unclear explanations or bad jokes
@@ -104,9 +108,15 @@ finance.
    AI coding agents pick it up in this repository: Codex reads `.agents/skills/`, Claude Code reads a pointer in
    `.claude/skills/`, and agents that read `AGENTS.md` are directed to it from there. You can also write the script
    by hand. Copy the header of an existing script, including the educational notice and the spoken notice in the
-   cold open.
+   cold open. Start the script with a `## Cold open` section and do not write the intro or outro yourself.
+
+   **Personalize the hosts.** We invite you to put your own names on your episode. Write `ANA:` and `PEDRO:` instead
+   of `MEI:` and `JUAN:`, keeping the two roles: the first host to speak is the guide, the second the student. To pick
+   the voices, add a line such as `- **Voices:** ANA=af_bella, PEDRO=am_adam` to the script header.
 6. Render the audio. The first time, download the two voice model files listed at the top of
    [make_podcast.py](.agents/skills/paper-to-podcast/make_podcast.py) into the `models/` folder next to it.
+   Always render with this script. It adds the show's intro and outro, including the music credit that the theme's
+   license requires.
 
    ```
    pip install kokoro-onnx lameenc scipy
