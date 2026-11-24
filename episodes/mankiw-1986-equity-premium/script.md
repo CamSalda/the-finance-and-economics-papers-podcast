@@ -25,27 +25,7 @@ MEI: Today we're doing a classic. Gregory Mankiw, 1986, in the Journal of Financ
 
 MIGUEL: Nine pages? I've written longer emails to my landlord.
 
-MEI: And this one has more ideas per page than your landlord emails. Fun fact to start: the referee on this paper was Fischer Black.
-
-MIGUEL: Black, as in Black-Scholes?
-
-MEI: That one. Mankiw thanks him in the very first footnote. So imagine sending in your paper, and the person checking your math has an option-pricing formula named after him.
-
-MIGUEL: No pressure at all.
-
-MEI: And a sad footnote to that. Black died in 1995. Two years later, Myron Scholes and Robert Merton won the Nobel prize for option pricing, and the Nobel is never awarded after death.
-
-MIGUEL: Oof. Okay, and the author himself?
-
-MEI: When this paper was submitted, in 1985, Mankiw was a 27-year-old assistant professor at Harvard. He had finished his PhD at MIT a year earlier, and his advisor was Stanley Fischer, who is also thanked in this paper.
-
-MIGUEL: Thanking your PhD advisor. Smart career move.
-
-MEI: And look at the rest of that list. Stanley Fischer later ran the Bank of Israel and became Vice Chair of the US Federal Reserve. Olivier Blanchard later became chief economist of the IMF. And David Romer was Mankiw's classmate at Princeton.
-
-MIGUEL: So this nine-page paper has a better guest list than my wedding.
-
-MEI: Here's the hook. Between 1929 and 1933, during the Great Depression, consumption per person in the United States fell by about twenty percent.
+MEI: And this one has more ideas per page than your landlord emails. Here's the hook. Between 1929 and 1933, during the Great Depression, consumption per person in the United States fell by about twenty percent.
 
 MIGUEL: Twenty percent is huge.
 
@@ -54,6 +34,22 @@ MEI: It is. But Mankiw asks a sneaky question. Did everyone consume twenty perce
 MIGUEL: I'm guessing the second one.
 
 MEI: And that question, who actually takes the hit, is the whole paper. By the end of this episode you'll see why it can make stocks much riskier than the averages suggest.
+
+MIGUEL: Okay, and the author?
+
+MEI: When this paper was submitted, in 1985, Mankiw was a 27-year-old assistant professor at Harvard. He had finished his PhD at MIT a year earlier, and his advisor was Stanley Fischer, who later ran the Bank of Israel and became Vice Chair of the US Federal Reserve. Fischer is thanked in the paper, along with Olivier Blanchard, later chief economist of the IMF.
+
+MIGUEL: So this nine-page paper has a better guest list than my wedding.
+
+MEI: And the best guest comes last. The referee on this paper was Fischer Black.
+
+MIGUEL: Black, as in Black-Scholes?
+
+MEI: That one. Mankiw thanks him in the very first footnote. So imagine sending in your paper, and the person checking your math has an option-pricing formula named after him.
+
+MIGUEL: No pressure at all.
+
+MEI: And a sad footnote to that. Black died in 1995. Two years later, Myron Scholes and Robert Merton won the Nobel prize for option pricing, and the Nobel is never awarded after death. Okay. Let's start with the puzzle Mankiw is attacking.
 
 ## The puzzle
 

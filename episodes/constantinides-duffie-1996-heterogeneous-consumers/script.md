@@ -17,17 +17,19 @@
 
 MEI: Welcome to The Finance and Economics Papers Podcast, where we discuss the papers that shaped finance and economics, to make reading them easier and more fun. I'm Mei.
 
-MIGUEL: And I'm Miguel. I'm the one who asks the questions you're too embarrassed to ask in class. How long is today's paper?
-
-MEI: Twenty-two pages, with two appendices.
-
-MIGUEL: I can feel my happiness leaving my body.
+MIGUEL: And I'm Miguel. I'm the one who asks the questions you're too embarrassed to ask in class.
 
 MEI: Quick note before we start. This is an open-source, educational project. We explain published research in our own words, for learning only. We are not affiliated with the authors or the journal, and the best thing you can do after listening is read the original paper. The link is in the episode notes.
 
-MEI: Stay with me, it's worth it. George Constantinides and Darrell Duffie, "Asset Pricing with Heterogeneous Consumers," Journal of Political Economy, 1996. This is one of the most cited papers on why inequality matters for asset prices.
+MEI: Stay with me, because today's paper is worth it. George Constantinides and Darrell Duffie, "Asset Pricing with Heterogeneous Consumers," Journal of Political Economy, 1996. Twenty-two pages, with two appendices.
 
-MEI: The starting point is an idea from Gregory Mankiw, in 1986: recessions hit some people a lot instead of everyone a little. If people can't insure that risk, and marginal utility is convex, stocks look much riskier than aggregate data suggest. But Mankiw's model had two dates and one coin flip. A toy. Constantinides and Duffie take that idea and build a full dynamic economy, with many periods, many assets, and an equation you can actually take to the data.
+MIGUEL: I can feel my happiness leaving my body.
+
+MEI: It's one of the most cited papers on why inequality matters for asset prices. Here's the starting point. In 1986, Gregory Mankiw suggested that recessions hit some people a lot instead of everyone a little. If people can't insure that risk, and marginal utility is convex, stocks look much riskier than aggregate data suggest. But Mankiw's model had two dates and one coin flip. A toy.
+
+MIGUEL: And these two build the real thing?
+
+MEI: A full dynamic economy, with many periods, many assets, and an equation you can actually take to the data.
 
 MIGUEL: Who are these two?
 
@@ -35,7 +37,7 @@ MEI: George Constantinides is at the Chicago Booth School of Business. He was bo
 
 MIGUEL: Citing your own textbook. Power move.
 
-MEI: Both later served as president of the American Finance Association: Constantinides in 2001, Duffie in 2009. And the acknowledgments are fun too. Lars Hansen "provided a correction and many helpful suggestions."
+MEI: Both later served as president of the American Finance Association: Constantinides in 2001, Duffie in 2009. And the acknowledgments are fun. Lars Hansen "provided a correction and many helpful suggestions."
 
 MIGUEL: Lars Hansen, the Nobel prize Lars Hansen? Corrected their math?
 
@@ -43,7 +45,7 @@ MEI: That one. He shared the 2013 Nobel with Eugene Fama and Robert Shiller. And
 
 MIGUEL: So a fund company paid for research on why stocks pay so much. I'm sure that was completely neutral.
 
-MEI: At least it's disclosed. And Constantinides later served as an independent director of Dimensional's funds for about four decades.
+MEI: At least it's disclosed. And Constantinides later served as an independent director of Dimensional's funds for about four decades. Okay. On to the paper.
 
 ## Why the earlier fixes failed
 

@@ -29,15 +29,11 @@ MEI: Give it a chance, because the opening numbers are a slap in the face. In 20
 
 MIGUEL: Wait. So companies raise six times more money with bonds than with stocks?
 
-MEI: In 2019, yes. And yet, as the authors put it, our academic understanding of risk and return is "less developed in corporate bond markets than in equity markets." We have fifty years of factor models for stocks and a handful of young ones for bonds.
-
-MIGUEL: So the paper is: let's finally give bonds a proper factor model.
-
-MEI: With a twist in the method, and three findings. One, their model beats the existing bond models by a mile. Two, it implies that the reward for bearing credit risk is much bigger than we thought. Three, bond and stock markets are more connected than the literature believed.
+MEI: In 2019, yes. And yet, as the authors put it, our understanding of risk and return is "less developed in corporate bond markets than in equity markets." So this paper gives bonds a proper factor model, and finds three things: it beats the existing bond models by a mile, the reward for bearing credit risk is much bigger than we thought, and bond and stock markets are more connected than the literature believed.
 
 MIGUEL: And who are the three authors?
 
-MEI: Bryan Kelly is a professor of finance at Yale and, at the same time, head of machine learning at AQR, the quantitative investment firm. He did his PhD at NYU, where his committee was chaired by Robert Engle, and spent eight years at Chicago Booth before Yale. Seth Pruitt is at Arizona State. He did his PhD at UC San Diego with James Hamilton, then spent six years as an economist at the Federal Reserve Board. Diogo Palhares did his PhD at Chicago, worked at AQR, and was at Citadel when the paper came out.
+MEI: Bryan Kelly is a professor of finance at Yale and, at the same time, head of machine learning at AQR, the quantitative investment firm. Seth Pruitt is at Arizona State, after six years as an economist at the Federal Reserve Board. Diogo Palhares did his PhD at Chicago, worked at AQR, and was at Citadel when the paper came out.
 
 MIGUEL: Two academics and two hedge funds. That explains the trading costs section.
 
@@ -45,7 +41,7 @@ MEI: Kelly and Pruitt have been co-authors since 2013. Their first joint paper w
 
 MIGUEL: So I can actually run this at home.
 
-MEI: If you can get the data, yes. More on that later. Two more facts from the paper's first page. The editor was Stefan Nagel, who ran the Journal of Finance from 2016 to 2022. And the timeline: submitted in December 2020, accepted in October 2021. Ten months. For a top journal, that's fast.
+MEI: If you can get the data, yes. One more fact from the first page: submitted in December 2020, accepted in October 2021. Ten months, which is fast for a top journal. Okay, let's start with the problem.
 
 ## The problem
 

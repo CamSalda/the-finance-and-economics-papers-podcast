@@ -40,7 +40,7 @@ is directed to it from there. Each script explains the paper in our own words an
 Two open-source AI models, both released under the Apache 2.0 license, then turn the script into voices:
 
 - **[Kokoro](https://huggingface.co/hexgrad/Kokoro-82M)** voices Mei.
-- **[Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)** voices Miguel.
+- **[Qwen3-TTS](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice)** voices Miguel.
 
 Both voices are synthetic and imitate no real person. Qwen3-TTS needs an NVIDIA GPU, so rendering an episode
 requires one.
@@ -57,7 +57,6 @@ episodes/
     Surnames_Year_Title.mp3      the rendered audio, named after the APA citation
 assets/
   theme-jasm-heart-madgravitystudio.mp3   the show's theme music (CC BY 4.0, see below)
-  voices/miguel.wav, voices/miguel.txt    Miguel's reference clip and its transcript
   graphical-identity.jpg                  the show's banner
 .agents/skills/paper-to-podcast/
   SKILL.md         instructions for turning a paper into an episode
@@ -138,22 +137,23 @@ The generator adds the intro and outro automatically, so never write them into a
 
    **Personalize the hosts.** We invite you to put your own names on your episode. Write `ANA:` and `PEDRO:` instead
    of `MEI:` and `MIGUEL:`, keeping the two roles: the first host to speak is the guide, the second the student. To pick
-   the voices, add a line such as `- **Voices:** ANA=af_bella, PEDRO=qwen:pedro` to the script header. A name like
-   `af_bella` is a Kokoro voice. `qwen:pedro` clones a reference clip you add as `assets/voices/pedro.wav`, with its
-   transcript in `assets/voices/pedro.txt`. Use only a voice you created or have the right to use, never a recording
-   of a real person without their permission.
+   the voices, add a line such as `- **Voices:** ANA=af_bella, PEDRO=qwen:Ryan` to the script header. A name like
+   `af_bella` is a Kokoro voice, and `qwen:Ryan` is one of Qwen3-TTS's built-in voices. `clone:pedro` makes
+   Qwen3-TTS clone a reference clip you add as `assets/voices/pedro.wav`, with its transcript in
+   `assets/voices/pedro.txt`. Use only a voice you created or have the right to use, never a recording of a real
+   person without their permission.
 6. Render the audio. Always use this script: it adds the show's intro and outro, including the music credit that
    the theme's license requires. The first time, download the two Kokoro model files listed at the top of
    [make_podcast.py](.agents/skills/paper-to-podcast/make_podcast.py) into the `models/` folder next to it.
 
-   **You need an NVIDIA GPU** with CUDA and about 8 GB of video memory, because Qwen3-TTS voices Miguel by cloning
-   his reference clip, `assets/voices/miguel.wav`. Kokoro, which voices Mei, runs on any computer, so an episode
+   **You need an NVIDIA GPU** with CUDA and about 8 GB of video memory, because Qwen3-TTS voices Miguel with its
+   built-in voice Aiden. Kokoro, which voices Mei, runs on any computer, so an episode
    hosted only with Kokoro voices renders without a GPU. On a laptop RTX 4060, rendering takes **about as long as
    the episode itself**, so 20 to 30 minutes, and the first run also downloads the Qwen3-TTS model (about 4.5 GB).
 
    ```
    pip install torch --index-url https://download.pytorch.org/whl/cu124
-   pip install kokoro-onnx qwen-tts audiotsm lameenc scipy
+   pip install kokoro-onnx qwen-tts lameenc scipy
    python .agents/skills/paper-to-podcast/make_podcast.py episodes/<slug>/script.md
    ```
 
@@ -185,7 +185,8 @@ The generator adds the intro and outro automatically, so never write them into a
 Before you submit your pull request, check that your episode meets these guidelines:
 
 - [ ] The issue that claims the paper is referenced in the pull request description.
-- [ ] The episode lasts 30 minutes or less.
+- [ ] The episode lasts 30 minutes or less, and the analysis of the paper starts by 3:30: the intro, the hosts'
+      introductions, the notice, the hook and all the facts about the authors fit before that.
 - [ ] The episode stands alone: it never refers to other episodes of the show, since listeners hear them in any
       order.
 - [ ] The episode closes with the recap: question, method, main takeaways and conclusion.
