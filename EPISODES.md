@@ -15,7 +15,7 @@ New to a topic? Start with a path. Each one is a short playlist in the order tha
 3. [Constantinides and Duffie (1996)](episodes/constantinides-duffie-1996-heterogeneous-consumers/): the same
    idea in a full dynamic model, where consumption inequality enters the pricing kernel.
 
-Coming next: [Upcoming episodes](UPCOMING_EPISODES.md) lists more than fifty landmark papers in finance and
+Coming next: [Upcoming episodes](UPCOMING_EPISODES.md) lists more than a hundred landmark papers in finance and
 economics that we plan to cover, in APA format. Pick one and contribute it!
 
 ## Episodes by topic
