@@ -14,8 +14,8 @@ episodes.
 ## Episodes
 
 Browse the library in [EPISODES.md](EPISODES.md): learning paths, episodes by topic, and the full list with scripts,
-audio and links to every paper. Coming next: [Upcoming episodes](UPCOMING_EPISODES.md) lists more than fifty landmark
-papers in finance that we plan to cover. Pick one and contribute it!
+audio and links to every paper. Coming next: [Upcoming episodes](UPCOMING_EPISODES.md) lists more than a hundred
+landmark papers in finance and economics that we plan to cover. Pick one and contribute it!
 
 ## How an episode works
 
