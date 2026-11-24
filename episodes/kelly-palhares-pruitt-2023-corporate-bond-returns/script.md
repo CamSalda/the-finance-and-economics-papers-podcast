@@ -10,7 +10,7 @@
 - **Paper:** Kelly, B., Palhares, D., & Pruitt, S. (2023). Modeling corporate bond returns. *The Journal of Finance*, 78(4), 1967-2008.
 - **Read the paper:** https://doi.org/10.1111/jofi.13233
 - **Topics:** Corporate bonds and credit; factor models; asset pricing; market integration
-- **Length:** 26 minutes
+- **Length:** 25 minutes
 - **Hosts:** Mei (the guide) and Miguel (the student)
 
 ## Cold open
