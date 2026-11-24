@@ -10,7 +10,7 @@
 - **Paper:** Cochrane, J. H. (2017). Macro-finance. *Review of Finance*, 21(3), 945-985.
 - **Read the paper:** https://doi.org/10.1093/rof/rfx010
 - **Topics:** Asset pricing; macro-finance; equity premium; return predictability; habit formation; long-run risk
-- **Length:** 28 minutes
+- **Length:** 27 minutes
 - **Hosts:** Mei (the guide) and Miguel (the student)
 
 ## Cold open
