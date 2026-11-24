@@ -9,7 +9,9 @@ The Finance Papers Podcast is a free, open-source, non-commercial educational pr
 and spread knowledge about research in finance. Every episode is an independent, unofficial explanation of one
 paper, written in our own words for teaching purposes.
 
-This skill produces one episode: a script at `episodes/<slug>/script.md` and audio at `episodes/<slug>/episode.mp3`.
+This skill produces one episode: a script at `episodes/<slug>/script.md` and audio next to it, which the renderer names
+after the APA citation in the script header: `Surnames_Year_Title.mp3`, for example
+`Mehra-Prescott_1985_The-equity-premium-A-puzzle.mp3`.
 The published episodes in `episodes/` are the reference for tone, pacing and format. Read one before writing.
 
 ## Parameters
@@ -161,7 +163,7 @@ in the background.
 ```
 pip install torch --index-url https://download.pytorch.org/whl/cu124
 pip install kokoro-onnx qwen-tts audiotsm lameenc scipy
-python .agents/skills/paper-to-podcast/make_podcast.py episodes/<slug>/script.md episodes/<slug>/episode.mp3
+python .agents/skills/paper-to-podcast/make_podcast.py episodes/<slug>/script.md
 ```
 
 The first time, download the two model files listed at the top of `make_podcast.py` into the `models/` folder next

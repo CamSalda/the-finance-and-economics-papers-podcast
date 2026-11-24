@@ -1,6 +1,9 @@
 """Render a two-host script into one MP3 with two open-source voice models: Kokoro and Qwen3-TTS (both Apache 2.0).
 
-Usage: python make_podcast.py episodes/<slug>/script.md episodes/<slug>/episode.mp3
+Usage: python make_podcast.py episodes/<slug>/script.md [output.mp3]
+
+Without an output path, the MP3 is written next to the script and named after the APA citation in the script
+header, as Surnames_Year_Title.mp3, for example Mehra-Prescott_1985_The-equity-premium-a-puzzle.mp3.
 
 Setup (an NVIDIA GPU is required for Qwen3-TTS voices):
     pip install torch --index-url https://download.pytorch.org/whl/cu124
@@ -38,6 +41,8 @@ TURN_LOUDNESS = 0.08
 MUSIC_LOUDNESS = 0.10
 MUSIC_UNDER_VOICE = 0.38
 TURN = re.compile(r"^([A-ZÀ-Ý]+): (.+)$", re.M)
+CITATION = re.compile(r"^- \*\*Paper:\*\* (.+?) \((\d{4})\)\. (.+?)\. \*", re.M)
+INITIALS = re.compile(r"^(?:&|and)? ?(?:[A-Z]\.(?: ?[A-Z]\.)*)?$")
 KOKORO_SPEED = 1.1
 KOKORO_PRONUNCIATIONS = {"is read the original paper": "is reed the original paper"}  # Kokoro says "red" here
 PAUSE_SECONDS = 0.3
@@ -58,6 +63,14 @@ CLOSING = (
     "guide to contribute your own episode are on GitHub. Music: JASM HEART, by MadGravityStudio, under a Creative "
     "Commons Attribution license."
 )
+
+
+def mp3_name(script):
+    """Name the audio after the APA citation in the header: Surnames_Year_Title.mp3."""
+    authors, year, title = CITATION.search(script).groups()
+    surnames = [re.sub(r"^(?:&|and) ", "", part) for part in authors.split(", ") if not INITIALS.match(part)]
+    words = lambda text: "-".join(re.sub(r"[^\w\s-]", "", text).split())
+    return f"{words(' '.join(surnames))}_{year}_{words(title)}.mp3"
 
 
 def voices_for(script):
@@ -140,8 +153,9 @@ def over_theme(voice, theme, sample_rate, lead=3.0, tail=3.0, duck=MUSIC_UNDER_V
     return mix
 
 
-def main(script_path, mp3_path):
+def main(script_path, mp3_path=None):
     text = Path(script_path).read_text(encoding="utf-8")
+    mp3_path = mp3_path or Path(script_path).parent / mp3_name(text)
     voices = voices_for(text)
     guide = next(iter(voices))
     engines = {"kokoro": Kokoro(str(MODELS / "kokoro-v1.0.onnx"), str(MODELS / "voices-v1.0.bin")), "qwen": Qwen()}
@@ -160,8 +174,8 @@ def main(script_path, mp3_path):
     encoder.set_in_sample_rate(sample_rate)
     encoder.set_channels(1)
     Path(mp3_path).write_bytes(encoder.encode(pcm.tobytes()) + encoder.flush())
-    print(f"{len(audio) / sample_rate / 60:.1f} min")
+    print(f"{mp3_path}: {len(audio) / sample_rate / 60:.1f} min")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    main(*sys.argv[1:3])
