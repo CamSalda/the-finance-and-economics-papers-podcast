@@ -10,7 +10,7 @@
 - **Paper:** Mehra, R., & Prescott, E. C. (1985). The equity premium: A puzzle. *Journal of Monetary Economics*, 15(2), 145-161.
 - **Read the paper:** https://doi.org/10.1016/0304-3932(85)90061-3
 - **Topics:** Asset pricing; equity premium puzzle; consumption-based asset pricing
-- **Length:** 22 minutes
+- **Length:** 20 minutes
 - **Hosts:** Mei (the guide) and Miguel (the student)
 
 ## Cold open
