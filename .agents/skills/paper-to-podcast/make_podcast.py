@@ -1,6 +1,6 @@
 """Render a two-host script into one MP3 with two open-source voice models: Kokoro and Qwen3-TTS (both Apache 2.0).
 
-Usage: python make_podcast.py episodes/<slug>/script.md [output.mp3]
+Usage: python make_podcast.py episodes/<year>/<slug>/script.md [output.mp3]
 
 Without an output path, the MP3 is written next to the script and named after the APA citation in the script
 header, as Surnames_Year_Title.mp3, for example Mehra-Prescott_1985_The-equity-premium-a-puzzle.mp3.
