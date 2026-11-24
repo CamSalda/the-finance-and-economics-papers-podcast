@@ -39,12 +39,13 @@ MUSIC_LOUDNESS = 0.10
 MUSIC_UNDER_VOICE = 0.38
 TURN = re.compile(r"^([A-ZÀ-Ý]+): (.+)$", re.M)
 KOKORO_SPEED = 1.1
+KOKORO_PRONUNCIATIONS = {"is read the original paper": "is reed the original paper"}  # Kokoro says "red" here
 PAUSE_SECONDS = 0.3
 QWEN_MODEL = "Qwen/Qwen3-TTS-12Hz-1.7B-Base"
 QWEN_SAMPLING = dict(temperature=0.3, subtalker_temperature=0.3)
 QWEN_SEED = 1234
 QWEN_MAX_SECONDS_PER_WORD = 1.5  # a longer output is a runaway generation, so retry with a new seed
-QWEN_SPEED = 1.10
+QWEN_SPEED = 1.07
 QWEN_LOUDNESS = 1.2
 QWEN_PRONUNCIATIONS = {"Miguel": "Mi-GHEL"}
 TAGLINE = (
@@ -109,6 +110,8 @@ def synthesize(engines, text, voice):
         samples = engines["qwen"].say(text, voice.removeprefix("qwen:"))
         loudness *= QWEN_LOUDNESS
     else:
+        for phrase, spelling in KOKORO_PRONUNCIATIONS.items():
+            text = text.replace(phrase, spelling)
         samples, _ = engines["kokoro"].create(text, voice=voice, speed=KOKORO_SPEED, lang="en-us")
     return samples.astype(np.float32) * (loudness / np.sqrt(np.mean(samples**2)))
 
