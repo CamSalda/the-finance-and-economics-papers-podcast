@@ -23,15 +23,19 @@ Two hosts walk through one paper step by step:
 - **Mei, the guide**, knows the paper inside out and explains every technical term as it comes up.
 - **Miguel, the student**, asks the questions you would ask, restates ideas in his own words, and brings the jokes.
 
-Nobody reads equations aloud: the hosts describe what each equation contains and why it matters. The target listener
+The target listener
 is a finance student with some technical training who is still learning. Along the way, the hosts share interesting
 facts about the authors, their academic connections and the papers around each one. Every episode lasts at most 30
-minutes, closes with a one-minute recap of the paper, and comes with its full script, which doubles as a transcript.
+minutes, closes with a one-minute recap of the paper, and comes with its full script, which doubles as a transcript. Nobody reads equations aloud: the hosts describe what each equation contains and why it matters.
 
 ## How the episodes are made
 
-Each script explains the paper in our own words and is checked against the paper. Two open-source AI models, both
-released under the Apache 2.0 license, then turn the script into voices:
+The process is fully automated: point your AI coding agent to the
+[paper-to-podcast skill](.agents/skills/paper-to-podcast/SKILL.md) and it writes the script and renders the
+audio with [make_podcast.py](.agents/skills/paper-to-podcast/make_podcast.py). Codex reads the skill from
+`.agents/skills/`, Claude Code from the pointer in `.claude/skills/`, and any agent that reads [AGENTS.md](AGENTS.md)
+is directed to it from there. Each script explains the paper in our own words and is checked against the paper.
+Two open-source AI models, both released under the Apache 2.0 license, then turn the script into voices:
 
 - **[Kokoro](https://huggingface.co/hexgrad/Kokoro-82M)** voices Mei.
 - **[Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)** voices Miguel.
