@@ -41,10 +41,12 @@ Keep this dynamic. Mei explains, Miguel checks understanding by paraphrasing, an
 **Host your own episode.** Mei and Miguel are the default hosts. Contributors are invited to replace them with their
 own names in the episodes they add, for example `ANA:` and `PEDRO:`. Keep the two roles: the first host to speak is
 the guide and the second is the student. By default the guide has a female voice and the student a male one. To choose
-other voices, add a line `- **Voices:** ANA=af_bella, PEDRO=qwen:pedro` to the header. A plain name is a Kokoro
-voice (for example `af_heart`, `af_bella`, `af_nicole`, `am_adam`, `bf_emma`, `bm_george`). `qwen:pedro` clones the
-reference clip `assets/voices/pedro.wav`, with its transcript in `assets/voices/pedro.txt`; never clone a real
-person's voice without their permission. Ask the user which
+other voices, add a line `- **Voices:** ANA=af_bella, PEDRO=qwen:Ryan` to the header. A plain name is a Kokoro
+voice (for example `af_heart`, `af_bella`, `af_nicole`, `am_adam`, `bf_emma`, `bm_george`). `qwen:Ryan` is one of
+Qwen3-TTS's built-in voices (Aiden, Ryan, Eric, Dylan, Vivian, Serena and others). `clone:pedro` makes Qwen3-TTS
+clone the reference clip `assets/voices/pedro.wav`, with its transcript in `assets/voices/pedro.txt`; never clone a
+real person's voice without their permission, and do not mix built-in and cloned Qwen3-TTS voices in one episode,
+since they load two different models. Ask the user which
 names to use; default to Mei and Miguel.
 
 ## Audience and tone
@@ -79,7 +81,23 @@ Adapt the segments to the paper, but keep this order:
 1. **Cold open.** The guide opens with "Welcome to The Finance and Economics Papers Podcast, where we discuss the
    papers that shaped finance and economics, to make reading them easier and more fun." The hosts introduce
    themselves, and the guide reads the spoken educational notice (see below). Then give the paper's citation and
-   length, a fun fact, and a hook question. Keep the cold open under about 2 minutes.
+   length, the hook, and the facts about the authors. **The analysis of the paper starts by 3:30 at the latest**,
+   and everything about the authors lives here, not later in the episode. Budget, at about 150 words per minute:
+
+   | Block | Time | Words | Content |
+   |-------|------|-------|---------|
+   | Theme and tagline | 0:18 | automatic | added by the renderer |
+   | Welcome and hosts | 0:15 | fixed | the two standard lines |
+   | Educational notice | 0:18 | fixed | the standard notice |
+   | The paper | 0:20 | 50 | citation, length, one sentence on why it matters |
+   | The hook | 0:30 | 75 | the question or the striking number |
+   | The authors | 1:15 | 190 | one line per author, one connection, one story from the paper |
+   | Bridge | 0:10 | 25 | "Okay, let's start with..." |
+
+   That is about 340 words after the fixed lines and about 3:06 in total, leaving some slack. In the authors block,
+   the story comes from the paper itself: a footnote, the acknowledgments, the publication history. Facts that do
+   not fit are dropped, not moved. A fact tied to a specific result, such as a prize that result won, may still
+   appear where that result is discussed.
 2. **The problem.** Explain what puzzle or question the paper answers and why earlier answers fell short.
 3. **The setup.** Walk through the model or data step by step, defining every ingredient.
 4. **The mechanics.** Go through each main result in turn, with a plain-words punchline for each.
@@ -139,10 +157,10 @@ We use two open-source text-to-speech models, both released under the Apache 2.0
 - **[Kokoro](https://huggingface.co/hexgrad/Kokoro-82M)** voices Mei, with its `af_heart` voice. It is a small model
   (82 million parameters) that runs on any computer. We use the
   [kokoro-onnx](https://github.com/thewh1teagle/kokoro-onnx) version.
-- **[Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)** voices Miguel. Its
-  [Base model](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base) clones the reference clip
-  `assets/voices/miguel.wav`, a voice we created with Qwen3-TTS's preset speaker Aiden, so Miguel sounds the same
-  in every episode. His lines are sped up by 15% without changing pitch.
+- **[Qwen3-TTS](https://huggingface.co/collections/Qwen/qwen3-tts)** voices Miguel with the built-in speaker Aiden of its
+  [CustomVoice model](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice), at a fixed sampling seed and
+  a sampling temperature of 0.5, so Miguel sounds the same in every episode. Its
+  [Base model](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base) is used only for `clone:` voices.
 
 Both voices are synthetic. Neither imitates a real person.
 
@@ -163,7 +181,7 @@ in the background.
 
 ```
 pip install torch --index-url https://download.pytorch.org/whl/cu124
-pip install kokoro-onnx qwen-tts audiotsm lameenc scipy
+pip install kokoro-onnx qwen-tts lameenc scipy
 python .agents/skills/paper-to-podcast/make_podcast.py episodes/<slug>/script.md
 ```
 

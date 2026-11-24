@@ -25,35 +25,27 @@ MEI: Today's paper is a map of a whole field. John Cochrane, "Macro-Finance," Re
 
 MIGUEL: Forty-one pages. And no co-author to share the blame?
 
-MEI: Just him. It started life as a keynote speech at a conference in Melbourne in 2016, and it reads like one. Opinions included, jokes included.
-
-MIGUEL: So this is not a paper with a regression and a table of results.
-
-MEI: It's a survey with an attitude. Cochrane walks through every major theory of why stock prices move with the business cycle, and makes one big claim: they are all, deep down, the same equation. Then he tells you which one he likes, and why he thinks the others are worse.
+MEI: Just him. It started life as a keynote speech at a conference in Melbourne in 2016, and it reads like one. Opinions included, jokes included. It's a survey with an attitude: Cochrane walks through every major theory of why stock prices move with the business cycle, and makes one big claim: they are all, deep down, the same equation. Then he tells you which one he likes, and why he thinks the others are worse.
 
 MIGUEL: And which one does he like?
 
-MEI: His own, of course. We'll get there. First, who is he?
+MEI: His own, of course. We'll get there.
 
-MIGUEL: Yes. The name is everywhere in asset pricing.
+MIGUEL: And who is he? The name is everywhere in asset pricing.
 
-MEI: John Cochrane is a senior fellow at the Hoover Institution at Stanford. He studied physics at MIT, did his PhD in economics at Berkeley in 1986, and then spent most of his career at the University of Chicago's business school before moving to Hoover in 2015. He wrote the textbook Asset Pricing, which won the Paul Samuelson Award in 2001. And he was president of the American Finance Association in 2010. His presidential address was called "Discount Rates."
+MEI: John Cochrane is a senior fellow at the Hoover Institution at Stanford, after most of a career at the University of Chicago's business school. He wrote the textbook Asset Pricing, which won the Paul Samuelson Award in 2001, and he was president of the American Finance Association in 2010. His presidential address, "Discount Rates," gave us the phrase "a zoo of new factors." He also writes a blog called The Grumpy Economist.
 
-MIGUEL: And the famous phrase about a "zoo of new factors" comes from that address, right?
+MIGUEL: A grumpy survey. My favorite kind. Any family connections I should know about?
 
-MEI: It does. He also writes a blog called The Grumpy Economist, which tells you something about the tone to expect today. Two more things. His father, Eric Cochrane, was a historian of Renaissance Italy at the University of Chicago. And his father-in-law is Eugene Fama.
+MEI: One big one. His father-in-law is Eugene Fama.
 
-MIGUEL: Wait. The Fama? The efficient markets Fama is his father-in-law?
+MIGUEL: Wait. The Fama? The efficient markets Fama?
 
 MEI: The one and only. And when he's not writing about discount rates, he flies competition gliders. He has represented the United States at the World Gliding Championships.
 
-MIGUEL: Physics, Fama, and gliders. A grumpy survey from a man who literally rides the wind. My favorite kind.
+MIGUEL: Fama and gliders. A grumpy survey from a man who literally rides the wind.
 
-MEI: One more fun fact from the first page. The paper thanks the editor, Alex Edmans, and Ivo Welch, "for extensive and thoughtful comments." It was received on December 30, 2016, and accepted on January 23, 2017.
-
-MIGUEL: Twenty-four days from submission to acceptance? My referee reports take longer than that to be assigned.
-
-MEI: Keynote papers get a fast lane. Okay. Let's start where he starts, with the facts.
+MEI: One more fact from the first page: received on December 30, 2016, accepted on January 23, 2017. Twenty-four days. Keynote papers get a fast lane. Okay, let's start where he starts, with the facts.
 
 ## Two facts and one question
 

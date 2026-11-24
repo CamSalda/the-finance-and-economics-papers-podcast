@@ -14,6 +14,9 @@ Rules that always apply:
   `## Cold open` section. The theme plays at the very start, before the first line.
 - Rendering needs an NVIDIA GPU, because Miguel's voice uses Qwen3-TTS. On a laptop GPU, rendering takes about as long as
   the episode itself, so run it in the background. Mei's voice uses Kokoro. Both models are open source. Never write the tagline or the music credit into a script.
+- The analysis of the paper starts by 3:30 at the latest. The cold open holds everything that comes before it,
+  including all the facts about the authors, within the budget in the skill: about 340 spoken words after the
+  fixed lines, of which at most 190 are about the authors. Facts that do not fit are dropped, not moved later.
 - The default hosts are Mei (the guide) and Miguel (the student). Contributors may host their own episodes under their
   own names; keep the two roles.
 - Never upload the paper. Papers are protected by copyright and belong to their authors and publishers. Do not

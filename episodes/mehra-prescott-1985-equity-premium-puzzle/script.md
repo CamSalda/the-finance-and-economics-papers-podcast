@@ -17,51 +17,31 @@
 
 MEI: Welcome to The Finance and Economics Papers Podcast, where we discuss the papers that shaped finance and economics, to make reading them easier and more fun. I'm Mei.
 
-MIGUEL: And I'm Miguel, still asking the questions you're too embarrassed to ask in class.
+MIGUEL: And I'm Miguel. I'm the one who asks the questions you're too embarrassed to ask in class.
 
 MEI: Quick note before we start. This is an open-source, educational project. We explain published research in our own words, for learning only. We are not affiliated with the authors or the journal, and the best thing you can do after listening is read the original paper. The link is in the episode notes.
 
-MEI: Today is a special one. Rajnish Mehra and Edward Prescott, "The equity premium: A puzzle," Journal of Monetary Economics, 1985. Seventeen pages.
+MEI: Today is a special one. Rajnish Mehra and Edward Prescott, "The equity premium: A puzzle," Journal of Monetary Economics, 1985. Seventeen pages, and the origin of a name you've heard in every asset pricing class.
 
-MIGUEL: The equity premium puzzle. I've heard that name in every asset pricing class.
+MIGUEL: The equity premium puzzle. So this is the origin story. The first movie that every sequel copies.
 
-MEI: And this is where the name comes from. Mankiw in 1986, Constantinides and Duffie in 1996, and many other papers are attempts to solve the puzzle these two set.
-
-MIGUEL: So it's the origin story. The first movie that every sequel copies.
-
-MEI: And it's worth it. Here's the hook. Over ninety years, from 1889 to 1978, American stocks paid a real return of about seven percent a year. Safe short-term debt paid less than one percent. Mehra and Prescott ask a simple question: can a standard economic model explain that gap?
+MEI: Here's the hook. Over ninety years, from 1889 to 1978, American stocks paid a real return of about seven percent a year. Safe short-term debt paid less than one percent. Mehra and Prescott ask a simple question: can a standard economic model explain that gap?
 
 MIGUEL: And the answer is in the title. It's a puzzle.
 
 MEI: The answer is "not even close." And the way they show it is a masterclass in how to use a model.
 
-MIGUEL: Any fun facts before we dive in?
+MIGUEL: And who are the two authors?
 
-MEI: Plenty, starting with the first footnote. The research began at the University of Chicago, where Mehra was a visiting scholar at the business school and Prescott a visiting professor in economics. And early versions had a much more boring title: "A Test of the Intertemporal Asset Pricing Model."
+MEI: Edward Prescott was at the Federal Reserve Bank of Minneapolis and the University of Minnesota. In 2004 he won the Nobel prize with Finn Kydland, for their work on dynamic macroeconomics. Rajnish Mehra was at Columbia, and later spent decades at UC Santa Barbara before moving to Arizona State. He did his PhD at Carnegie Mellon, and his advisor was Prescott himself.
 
-MIGUEL: "The equity premium: A puzzle" is way catchier. Somebody had a marketing instinct.
+MIGUEL: So Prescott wrote his most famous finance paper with one student.
 
-MEI: It also needed patience. Mehra later wrote that the research dates from 1979, and that "it took us six more years to convince a skeptical profession" before it was published. The Minneapolis Fed put out the version with the old title as a staff report in 1982.
+MEI: And won the Nobel with another, because Kydland was his student too. Great mentor, or great at recruiting co-authors. Now the story. Mehra later wrote that the research dates from 1979, and that "it took us six more years to convince a skeptical profession" before it was published. Early versions even had a much more boring title: "A Test of the Intertemporal Asset Pricing Model."
 
-MIGUEL: Six years. I get impatient when a referee takes six weeks.
+MIGUEL: Six years. I get impatient when a referee takes six weeks. And "A puzzle" is way catchier. Somebody had a marketing instinct.
 
-MEI: Then look at who they thank: George Constantinides, Eugene Fama, Merton Miller, Fischer Black, Stephen LeRoy and Charles Plosser.
-
-MIGUEL: Fischer Black, as in Black-Scholes? He's like the Stan Lee of finance: he makes a cameo everywhere.
-
-MEI: He even shows up in a second footnote, which we'll get to. And remember Constantinides in that list. He matters at the end.
-
-MIGUEL: And who are the authors?
-
-MEI: Edward Prescott was at the Federal Reserve Bank of Minneapolis and the University of Minnesota. He got his PhD at Carnegie Mellon in 1967. In 2004 he won the Nobel prize with Finn Kydland, for their work on dynamic macroeconomics: why policy promises are hard to keep, and what drives business cycles. He died in November 2022, at 81.
-
-MIGUEL: And Mehra?
-
-MEI: Rajnish Mehra was at Columbia. He did his PhD at Carnegie Mellon too, finishing in 1978, and his advisor was Prescott himself. Fun detail: Finn Kydland was also one of Prescott's PhD students.
-
-MIGUEL: So Prescott wrote his most famous finance paper with one student and won the Nobel with another. Great mentor, or great at recruiting co-authors.
-
-MEI: Both, probably. Mehra and Prescott had already worked together on a 1980 Econometrica paper about recursive competitive equilibrium, which this paper cites. Mehra later spent decades at UC Santa Barbara and is now at Arizona State.
+MEI: One last name to remember from the acknowledgments: George Constantinides. He matters at the end. Okay, let's start with the numbers.
 
 ## The data
 
