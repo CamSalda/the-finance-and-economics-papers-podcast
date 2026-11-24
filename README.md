@@ -52,7 +52,7 @@ EPISODES.md            the library: every released episode
 AGENTS.md              instructions for AI agents (CLAUDE.md imports it)
 UPCOMING_EPISODES.md   landmark papers planned as future episodes
 episodes/
-  <authors>-<year>-<keywords>/
+  <year>/<authors>-<year>-<keywords>/
     script.md                    full two-host script, with the citation and DOI in its header
     Surnames_Year_Title.mp3      the rendered audio, named after the APA citation
 assets/
@@ -63,9 +63,10 @@ assets/
   make_podcast.py  renders a script into an MP3
 ```
 
-All episodes sit in one flat folder, named by author surnames, year and two or three keywords, for example
-`mankiw-1986-equity-premium`. Folder names never change, so links never break. Topics, journals and years are
-handled by the tables in [EPISODES.md](EPISODES.md), where one paper can appear in several places.
+Episodes are grouped by the paper's year of publication, and each episode folder is named by author surnames,
+year and two or three keywords, for example `episodes/1986/mankiw-1986-equity-premium`. Folder names never
+change, so links never break. Topics and journals are handled by the tables in [EPISODES.md](EPISODES.md),
+where one paper can appear in several places.
 
 ## How to contribute
 
@@ -127,7 +128,7 @@ The generator adds the intro and outro automatically, so never write them into a
    git checkout -b episode-<authors>-<year>
    ```
 
-5. Write `episodes/<authors>-<year>-<keywords>/script.md`. The fastest way is the agent skill in
+5. Write `episodes/<year>/<authors>-<year>-<keywords>/script.md`. The fastest way is the agent skill in
    [.agents/skills/paper-to-podcast](.agents/skills/paper-to-podcast/SKILL.md), which sets out the hosts, tone,
    structure, length rule and accuracy rules. It follows the open [Agent Skills](https://agentskills.io) format, so
    AI coding agents pick it up in this repository: Codex reads `.agents/skills/`, Claude Code reads a pointer in
@@ -154,7 +155,7 @@ The generator adds the intro and outro automatically, so never write them into a
    ```
    pip install torch --index-url https://download.pytorch.org/whl/cu124
    pip install kokoro-onnx qwen-tts lameenc scipy
-   python .agents/skills/paper-to-podcast/make_podcast.py episodes/<slug>/script.md
+   python .agents/skills/paper-to-podcast/make_podcast.py episodes/<year>/<slug>/script.md
    ```
 
    The MP3 lands next to the script, named after the APA citation in the script header, for example
@@ -167,7 +168,7 @@ The generator adds the intro and outro automatically, so never write them into a
 8. Commit, sync with the latest version of this repository, and push:
 
    ```
-   git add episodes/<slug> EPISODES.md UPCOMING_EPISODES.md
+   git add episodes/<year>/<slug> EPISODES.md UPCOMING_EPISODES.md
    git commit -m "Add episode on <authors> (<year>)"
    git fetch upstream
    git rebase upstream/main
