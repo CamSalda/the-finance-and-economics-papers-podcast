@@ -10,7 +10,7 @@
 - **Paper:** Mankiw, N. G. (1986). The equity premium and the concentration of aggregate shocks. *Journal of Financial Economics*, 17(1), 211-219.
 - **Read the paper:** https://doi.org/10.1016/0304-405X(86)90012-7
 - **Topics:** Asset pricing; equity premium puzzle; incomplete markets
-- **Length:** 22 minutes
+- **Length:** 23 minutes
 - **Hosts:** Mei (the guide) and Miguel (the student)
 
 ## Cold open
@@ -121,7 +121,7 @@ MIGUEL: So it's a bet. Lose a dollar if things go badly, win a dollar plus a bon
 
 MEI: Perfect. And the question is: how big must the bonus pi be for people to be willing to hold this bet?
 
-MIGUEL: And the answer comes from...
+MIGUEL: And where does the answer come from?
 
 MEI: The first-order condition, the workhorse equation of asset pricing. In words, it says that the expected payoff of the bet, weighted by marginal utility, must equal zero.
 
@@ -235,7 +235,7 @@ MIGUEL: So the hamster in the bomb shelter might just be a normal person who's s
 
 MEI: That's the paper in one sentence. One caveat Mankiw flags: the direction depends on the concentrated shock being bad. If a few people instead got a concentrated windfall, more concentration would shrink the premium.
 
-MIGUEL: Proposition three.
+MIGUEL: Okay, proposition three. What does it say?
 
 MEI: Suppose marginal utility goes to infinity as consumption goes to zero. That's called the Inada condition. In plain words: having nothing at all is infinitely bad.
 
@@ -293,7 +293,7 @@ MIGUEL: So the representative agent is a stunt double. Great for action scenes, 
 
 MEI: And he leaves a research agenda: figure out when the approximation works and when it fails. Ten years later, Constantinides and Duffie, in 1996, build a full dynamic model on this idea, where the cross-sectional variance of consumption growth enters the pricing kernel directly.
 
-MEI: And Mankiw didn't drop the topic. In 1991, with Stephen Zeldes, he showed that only about a quarter of American families owned any stock at all. That paper comes back in our next episode.
+MEI: And Mankiw didn't drop the topic. In 1991, with Stephen Zeldes, he showed that only about a quarter of American families owned any stock at all.
 
 MIGUEL: And what happened to Mankiw himself?
 

@@ -151,8 +151,8 @@ memory. Kokoro, which voices Mei, runs on any computer, so an episode hosted onl
 a GPU.
 
 **Render time.** On a laptop with an NVIDIA RTX 4060 (8 GB), Miguel's lines take about 3 seconds of computing per
-second of audio, and Mei's about 0.3 seconds. A full 20 to 30 minute episode therefore takes roughly **25 to 45
-minutes** to render. Faster GPUs, or Linux with FlashAttention installed, shorten this. The first run also downloads
+second of audio, and Mei's about 0.3 seconds. Rendering therefore takes **about as long as the episode
+itself**, 20 to 30 minutes for a full episode. Faster GPUs, or Linux with FlashAttention installed, shorten this. The first run also downloads
 the Qwen3-TTS model (about 4.5 GB).
 
 Tell the user about the GPU requirement and the expected render time before starting a render, and run the render

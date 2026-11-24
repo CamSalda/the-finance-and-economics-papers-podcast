@@ -10,16 +10,16 @@
 - **Paper:** Constantinides, G. M., and Duffie, D. (1996). Asset pricing with heterogeneous consumers. *Journal of Political Economy*, 104(2), 219-240.
 - **Read the paper:** https://doi.org/10.1086/262023
 - **Topics:** Asset pricing; equity premium puzzle; incomplete markets; heterogeneous agents
-- **Length:** 30 minutes
+- **Length:** 29 minutes
 - **Hosts:** Mei (the guide) and Miguel (the student)
 
-## Cold open and recap
+## Cold open
 
-MEI: Welcome back to The Finance Papers Podcast, where we discuss the papers that shaped finance, to make reading them easier and more fun. I'm Mei.
+MEI: Welcome to The Finance Papers Podcast, where we discuss the papers that shaped finance, to make reading them easier and more fun. I'm Mei.
 
-MIGUEL: And I'm Miguel, still asking the questions you're too shy to ask. Last episode we did Mankiw 1986. Nine pages. I was very happy.
+MIGUEL: And I'm Miguel. I'm the one who asks the questions you're too embarrassed to ask in class. How long is today's paper?
 
-MEI: Today's paper is twenty-two pages, with two appendices.
+MEI: Twenty-two pages, with two appendices.
 
 MIGUEL: I can feel my happiness leaving my body.
 
@@ -27,13 +27,7 @@ MEI: Quick note before we start. This is an open-source, educational project. We
 
 MEI: Stay with me, it's worth it. George Constantinides and Darrell Duffie, "Asset Pricing with Heterogeneous Consumers," Journal of Political Economy, 1996. This is one of the most cited papers on why inequality matters for asset prices.
 
-MIGUEL: Quick recap of Mankiw for anyone who skipped last week?
-
-MEI: Mankiw said that recessions hit some people a lot instead of everyone a little. If people can't insure that risk, and marginal utility is convex, stocks look much riskier than aggregate data suggest.
-
-MIGUEL: The hamster in the bomb shelter was just a normal person afraid of losing their job.
-
-MEI: Exactly. But Mankiw's model had two dates and one coin flip. A toy. Constantinides and Duffie take that idea and build a full dynamic economy, with many periods, many assets, and an equation you can actually take to the data.
+MEI: The starting point is an idea from Gregory Mankiw, in 1986: recessions hit some people a lot instead of everyone a little. If people can't insure that risk, and marginal utility is convex, stocks look much riskier than aggregate data suggest. But Mankiw's model had two dates and one coin flip. A toy. Constantinides and Duffie take that idea and build a full dynamic economy, with many periods, many assets, and an equation you can actually take to the data.
 
 MIGUEL: Who are these two?
 
@@ -49,15 +43,13 @@ MEI: That one. He shared the 2013 Nobel with Eugene Fama and Robert Shiller. And
 
 MIGUEL: So a fund company paid for research on why stocks pay so much. I'm sure that was completely neutral.
 
-MEI: At least it's disclosed. Constantinides served as an independent director of Dimensional's funds for about four decades, and Duffie joined that same board in 2019.
-
-MIGUEL: So the two authors ended up on the same board. Academia is a small town.
+MEI: At least it's disclosed. And Constantinides later served as an independent director of Dimensional's funds for about four decades.
 
 ## Why the earlier fixes failed
 
 MIGUEL: Okay, set the scene. What's wrong with the standard model?
 
-MEI: The standard model is the representative-consumer model of Lucas, 1978. Lucas, by the way, won the Nobel prize in 1995. One imaginary consumer eats the whole economy's consumption, and asset prices must satisfy that consumer's Euler equation.
+MEI: The standard model is the representative-consumer model of Lucas, 1978. One imaginary consumer eats the whole economy's consumption, and asset prices must satisfy that consumer's Euler equation.
 
 MIGUEL: Remind me what an Euler equation is.
 
@@ -117,7 +109,7 @@ MIGUEL: Plus bonds?
 
 MEI: Plus default-free discount bonds of many maturities. A discount bond pays one unit of the good at maturity and nothing before. These bonds are in zero net supply.
 
-MIGUEL: Zero net supply meaning...
+MIGUEL: Zero net supply, meaning what?
 
 MEI: For every borrower there is a lender. If you add up everyone's bond holdings, you get zero. Bonds are just contracts between consumers.
 
@@ -165,9 +157,7 @@ MEI: Exactly. Bond prices too: a bond price is just the expected ratio of future
 
 MIGUEL: And any assumptions on the kernel?
 
-MEI: Two. The first is innocuous: as maturity goes to infinity, bond prices go to zero. A bond paying a dollar in a million years is worth almost nothing today.
-
-MEI: The second is the substantive one. They call it the pricing kernel condition. It says: the growth of the true kernel, from one period to the next, must be at least as large as the representative consumer's marginal rate of substitution. That marginal rate is the discount factor times aggregate consumption growth raised to minus alpha.
+MEI: One substantive one. They call it the pricing kernel condition. It says: the growth of the true kernel, from one period to the next, must be at least as large as the representative consumer's marginal rate of substitution. That marginal rate is the discount factor times aggregate consumption growth raised to minus alpha.
 
 MIGUEL: Translate, please.
 
@@ -227,7 +217,7 @@ MIGUEL: I just felt something click. It was either my brain or my chair.
 
 ## Proposition 1 and the no-trade equilibrium
 
-MEI: Now the main result. Proposition 1: under those two kernel conditions, there exists an equilibrium with no trade that supports the given prices of securities and bonds.
+MEI: Now the main result. Proposition 1: under the pricing kernel condition, there exists an equilibrium with no trade that supports the given prices of securities and bonds.
 
 MIGUEL: No trade? Nobody trades anything?
 
@@ -241,17 +231,13 @@ MIGUEL: So my personal pain is the average pain, adjusted for my personal luck.
 
 MEI: Right. Now compute how much consumer i would pay for a security, their private valuation. You average over your own personal shock. And because the personal shock is normal and independent of everything else, that average has a closed form: the exponential of alpha times alpha plus one, over two, times y squared.
 
-MIGUEL: And y squared was chosen to fill the kernel gap...
+MIGUEL: And y squared was chosen to fill the kernel gap, right?
 
 MEI: So that factor equals exactly the ratio of the true kernel to the representative kernel. Substitute, and consumer i's private valuation equals the market price. For every consumer, for every security.
 
 MIGUEL: So everyone looks at the market and says, "that price is exactly what I think it's worth." No reason to buy or sell.
 
-MEI: That's a no-trade equilibrium. There's also a technical point about transversality, making sure nobody gains from some infinitely long trading strategy. That's Appendix A.
-
-MIGUEL: Appendix A. Do we need it?
-
-MEI: Short version: they show that any feasible deviation from the no-trade strategy doesn't raise your utility. Concavity of utility does the heavy lifting.
+MEI: That's a no-trade equilibrium. Appendix A adds a technical check: nobody gains from some infinitely long trading strategy either.
 
 MIGUEL: Appendix A, you have been acknowledged. Moving on.
 
@@ -284,12 +270,6 @@ MEI: That's the key interpretation. y squared is the cross-sectional variance of
 MIGUEL: So in a year when everyone's consumption grows at roughly the same rate, y squared is small. In a year when some people do great and others crash, y squared is big.
 
 MEI: Exactly. And it can be measured from panel data on consumption, which is data that follows the same households over time. That's why the authors stress that the model is testable.
-
-MIGUEL: Why alpha times alpha plus one, over two? It looks random.
-
-MEI: It comes from the same lognormal averaging as before. The intuition: the curvature of marginal utility. With power utility, marginal utility is convex, and the convexity grows with alpha. Jensen again: dispersion in consumption raises average marginal utility, and the more curved marginal utility is, the more dispersion hurts.
-
-MIGUEL: Jensen, our mascot, strikes again.
 
 MEI: Now special cases. First: if consumers are homogeneous, y squared is zero, the booster equals one, and you're back to the textbook representative Euler equation.
 
@@ -353,11 +333,7 @@ MEI: It keeps the math tractable. And with that, a slightly modified version of 
 
 MIGUEL: Makes sense. If you might die, you discount the future more.
 
-MEI: Exactly. And because dynasties restart, the cross-sectional distribution of consumption settles into a stationary distribution, with finite variance under plausible conditions. They say you can calibrate it to the distribution reported by Cutler and Katz, 1991, from the Consumer Expenditure Survey.
-
-MIGUEL: Any catch?
-
-MEI: A fun one in the appendix. The distribution can have a fat tail. Whether the variance is finite depends on how fast the kernel and consumption grow compared with the death rate. The bigger the idiosyncratic shocks, the higher the death probability you need to keep inequality finite.
+MEI: Exactly. And because dynasties restart, the cross-sectional distribution of consumption settles into a stationary distribution, with finite variance under plausible conditions.
 
 ## Conclusion and legacy
 
@@ -367,7 +343,7 @@ MEI: Modestly. They chose power utility because it's homothetic: scaling everyon
 
 MIGUEL: Convex marginal utility again. That's Mankiw's third derivative.
 
-MEI: Exactly. In a footnote they cite Kimball 1990 on precautionary savings, plus Mankiw 1986 and Weil 1992, for the role of convex marginal utility. And they say it remains a challenge to build tractable heterogeneous economies that don't rely on convex marginal utility.
+MEI: Exactly. And they say it remains a challenge to build tractable heterogeneous economies that don't rely on convex marginal utility.
 
 MIGUEL: And did the idea work in the data?
 
