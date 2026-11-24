@@ -51,8 +51,8 @@ AGENTS.md              instructions for AI agents (CLAUDE.md imports it)
 UPCOMING_EPISODES.md   landmark papers planned as future episodes
 episodes/
   <authors>-<year>-<keywords>/
-    script.md      full two-host script, with the citation and DOI in its header
-    episode.mp3    the rendered audio
+    script.md                    full two-host script, with the citation and DOI in its header
+    Surnames_Year_Title.mp3      the rendered audio, named after the APA citation
 assets/
   theme-jasm-heart-madgravitystudio.mp3   the show's theme music (CC BY 4.0, see below)
   voices/miguel.wav, voices/miguel.txt    Miguel's reference clip and its transcript
@@ -151,8 +151,11 @@ The generator adds the intro and outro automatically, so never write them into a
    ```
    pip install torch --index-url https://download.pytorch.org/whl/cu124
    pip install kokoro-onnx qwen-tts audiotsm lameenc scipy
-   python .agents/skills/paper-to-podcast/make_podcast.py episodes/<slug>/script.md episodes/<slug>/episode.mp3
+   python .agents/skills/paper-to-podcast/make_podcast.py episodes/<slug>/script.md
    ```
+
+   The MP3 lands next to the script, named after the APA citation in the script header, for example
+   `Mehra-Prescott_1985_The-equity-premium-A-puzzle.mp3`.
 
 7. Move the paper from the upcoming list to the library:
    - **Remove** the paper from [UPCOMING_EPISODES.md](UPCOMING_EPISODES.md).
