@@ -55,13 +55,13 @@ QWEN_SPEED = 1.05
 QWEN_LOUDNESS = 1.2
 QWEN_PRONUNCIATIONS = {"Miguel": "Mi-GHEL"}
 TAGLINE = (
-    "The Finance Papers Podcast. A free, open-source educational project in which we discuss and explain classical "
-    "papers and current research in finance."
+    "The Finance and Economics Papers Podcast. A free, open-source educational project in which we discuss and explain "
+    "classical papers and current research in finance and economics."
 )
 CLOSING = (
-    "You've been listening to The Finance Papers Podcast. The link to the original paper, the full script, and a "
-    "guide to contribute your own episode are on GitHub. Music: JASM HEART, by MadGravityStudio, under a Creative "
-    "Commons Attribution license."
+    "You've been listening to The Finance and Economics Papers Podcast. The link to the original paper, the full "
+    "script, and a guide to contribute your own episode are on GitHub. Music: JASM HEART, by MadGravityStudio, under a "
+    "Creative Commons Attribution license."
 )
 
 

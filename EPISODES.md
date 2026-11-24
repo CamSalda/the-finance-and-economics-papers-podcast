@@ -1,7 +1,7 @@
 # Episodes
 
-The library of The Finance Papers Podcast: every released episode, with its script, audio and a link to the
-paper. Start with a learning path, browse by topic, or scan the full list.
+The library of The Finance and Economics Papers Podcast: every released episode, with its script, audio and a link
+to the paper. Start with a learning path, browse by topic, or scan the full list.
 
 ## Learning paths
 
@@ -15,8 +15,8 @@ New to a topic? Start with a path. Each one is a short playlist in the order tha
 3. [Constantinides and Duffie (1996)](episodes/constantinides-duffie-1996-heterogeneous-consumers/): the same
    idea in a full dynamic model, where consumption inequality enters the pricing kernel.
 
-Coming next: [Upcoming episodes](UPCOMING_EPISODES.md) lists more than fifty landmark papers in finance that we
-plan to cover, in APA format. Pick one and contribute it!
+Coming next: [Upcoming episodes](UPCOMING_EPISODES.md) lists more than fifty landmark papers in finance and
+economics that we plan to cover, in APA format. Pick one and contribute it!
 
 ## Episodes by topic
 

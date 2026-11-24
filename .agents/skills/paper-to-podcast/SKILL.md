@@ -1,13 +1,13 @@
 ---
 name: paper-to-podcast
-description: Turn an academic finance or economics paper (PDF) into an episode of The Finance Papers Podcast, a free, open-source, educational show with two hosts who explain the paper in a casual, funny and pedagogical way, and render it to MP3. Use when asked to make a podcast, episode, audio explainer, or script from a paper.
+description: Turn an academic finance or economics paper (PDF) into an episode of The Finance and Economics Papers Podcast, a free, open-source, educational show with two hosts who explain the paper in a casual, funny and pedagogical way, and render it to MP3. Use when asked to make a podcast, episode, audio explainer, or script from a paper.
 ---
 
 # Paper to podcast
 
-The Finance Papers Podcast is a free, open-source, non-commercial educational project. Its only goal is to create
-and spread knowledge about research in finance. Every episode is an independent, unofficial explanation of one
-paper, written in our own words for teaching purposes.
+The Finance and Economics Papers Podcast is a free, open-source, non-commercial educational project. Its only goal
+is to create and spread knowledge about research in finance and economics. Every episode is an independent,
+unofficial explanation of one paper, written in our own words for teaching purposes.
 
 This skill produces one episode: a script at `episodes/<slug>/script.md` and audio next to it, which the renderer names
 after the APA citation in the script header: `Surnames_Year_Title.mp3`, for example
@@ -33,8 +33,8 @@ minute, so target words = minutes x 150. The intro and outro add about one minut
 
 - **MEI, the guide.** She knows the paper inside out. She introduces every technical term and defines it in plain
   words in the same breath. She drives the structure.
-- **MIGUEL, the student.** He is a sharp finance student. He asks the questions a listener would ask ("Translate,
-  please"), restates ideas in his own words, pushes back, and brings most of the jokes and analogies.
+- **MIGUEL, the student.** He is a sharp finance or economics student. He asks the questions a listener would ask
+  ("Translate, please"), restates ideas in his own words, pushes back, and brings most of the jokes and analogies.
 
 Keep this dynamic. Mei explains, Miguel checks understanding by paraphrasing, and Mei confirms or corrects.
 
@@ -49,7 +49,7 @@ names to use; default to Mei and Miguel.
 
 ## Audience and tone
 
-The listener is a finance student with technical training who is still learning.
+The listener is a finance or economics student with technical training who is still learning.
 
 - Use the real technical terms (pricing kernel, Euler equation, risk aversion) and define each one on first use.
 - Never read equations aloud. For each important equation, describe its functional form ("a ratio", "the usual
@@ -76,9 +76,10 @@ Adapt the segments to the paper, but keep this order:
 
 0. **Intro (automatic).** Every episode starts with the show's theme, with the guide reading the tagline. Do not
    write it into the script: `make_podcast.py` plays it before the first line.
-1. **Cold open.** The guide opens with "Welcome to The Finance Papers Podcast, where we discuss the papers that
-   shaped finance, to make reading them easier and more fun." The hosts introduce themselves, and the guide reads the spoken educational notice (see below). Then give
-   the paper's citation and length, a fun fact, and a hook question. Keep the cold open under about 2 minutes.
+1. **Cold open.** The guide opens with "Welcome to The Finance and Economics Papers Podcast, where we discuss the
+   papers that shaped finance and economics, to make reading them easier and more fun." The hosts introduce
+   themselves, and the guide reads the spoken educational notice (see below). Then give the paper's citation and
+   length, a fun fact, and a hook question. Keep the cold open under about 2 minutes.
 2. **The problem.** Explain what puzzle or question the paper answers and why earlier answers fell short.
 3. **The setup.** Walk through the model or data step by step, defining every ingredient.
 4. **The mechanics.** Go through each main result in turn, with a plain-words punchline for each.
@@ -119,7 +120,7 @@ Adapt the segments to the paper, but keep this order:
 
 Copy the header of an existing script and fill it in. It has, in order:
 
-1. The title line: `# The Finance Papers Podcast: <episode title>`.
+1. The title line: `# The Finance and Economics Papers Podcast: <episode title>`.
 2. The educational notice block quote, copied unchanged from an existing script.
 3. A list with the paper's full citation, the DOI link, the topics, the length and the hosts.
 

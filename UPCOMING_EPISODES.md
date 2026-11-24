@@ -1,8 +1,8 @@
 # Upcoming episodes
 
-The Finance Papers Podcast is a free, open-source, educational project. This list collects landmark papers in the
-history of finance, plus a few influential recent ones, that we plan to turn into episodes. It doubles as a reading
-list for anyone learning finance.
+The Finance and Economics Papers Podcast is a free, open-source, educational project. This list collects landmark
+papers in the history of finance and economics, plus a few influential recent ones, that we plan to turn into
+episodes. It doubles as a reading list for anyone learning finance or economics.
 
 Want to make one of these episodes? Open an issue saying which paper you are working on, so two people don't make
 the same episode, then follow [How to contribute](README.md#how-to-contribute). When your episode is ready, your
