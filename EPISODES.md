@@ -58,6 +58,13 @@ A paper can appear under more than one topic.
 |-------|---------|--------|
 | Bao, Pan and Wang (2011) | [The bounce in the price](episodes/2011/bao-pan-wang-2011-illiquidity-corporate-bonds/) | 21 min |
 | Kelly, Palhares and Pruitt (2023) | [Bonds have betas too](episodes/2023/kelly-palhares-pruitt-2023-corporate-bond-returns/) | 25 min |
+| Liebscher and Mählmann (2017) | [Where skill shows up](episodes/2017/liebscher-mahlmann-2017-clo-manager-skill/) | 20 min |
+
+### Asset management and manager skill
+
+| Paper | Episode | Length |
+|-------|---------|--------|
+| Liebscher and Mählmann (2017) | [Where skill shows up](episodes/2017/liebscher-mahlmann-2017-clo-manager-skill/) | 20 min |
 
 ### Market liquidity
 
@@ -82,6 +89,7 @@ A paper can appear under more than one topic.
 | 2011 | Bao, Pan and Wang, *The illiquidity of corporate bonds* | The Journal of Finance | 21 min | [MP3](episodes/2011/bao-pan-wang-2011-illiquidity-corporate-bonds/Bao-Pan-Wang_2011_The-illiquidity-of-corporate-bonds.mp3) | [Script](episodes/2011/bao-pan-wang-2011-illiquidity-corporate-bonds/script.md) | [DOI](https://doi.org/10.1111/j.1540-6261.2011.01655.x) |
 | 2013 | Asness, Moskowitz and Pedersen, *Value and momentum everywhere* | The Journal of Finance | 23 min | [MP3](episodes/2013/asness-moskowitz-pedersen-2013-value-momentum-everywhere/Asness-Moskowitz-Pedersen_2013_Value-and-momentum-everywhere.mp3) | [Script](episodes/2013/asness-moskowitz-pedersen-2013-value-momentum-everywhere/script.md) | [DOI](https://doi.org/10.1111/jofi.12021) |
 | 2017 | Cochrane, *Macro-finance* | Review of Finance | 27 min | [MP3](episodes/2017/cochrane-2017-macro-finance/Cochrane_2017_Macro-finance.mp3) | [Script](episodes/2017/cochrane-2017-macro-finance/script.md) | [DOI](https://doi.org/10.1093/rof/rfx010) |
+| 2017 | Liebscher and Mählmann, *Are professional investment managers skilled? Evidence from syndicated loan portfolios* | Management Science | 20 min | [MP3](episodes/2017/liebscher-mahlmann-2017-clo-manager-skill/Liebscher-Mählmann_2017_Are-professional-investment-managers-skilled-Evidence-from-syndicated-loan-portfolios.mp3) | [Script](episodes/2017/liebscher-mahlmann-2017-clo-manager-skill/script.md) | [DOI](https://doi.org/10.1287/mnsc.2015.2412) |
 | 2023 | Kelly, Palhares and Pruitt, *Modeling corporate bond returns* | The Journal of Finance | 25 min | [MP3](episodes/2023/kelly-palhares-pruitt-2023-corporate-bond-returns/Kelly-Palhares-Pruitt_2023_Modeling-corporate-bond-returns.mp3) | [Script](episodes/2023/kelly-palhares-pruitt-2023-corporate-bond-returns/script.md) | [DOI](https://doi.org/10.1111/jofi.13233) |
 
 To listen, open an MP3 link and use the download button.
