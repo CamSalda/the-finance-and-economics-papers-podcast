@@ -141,8 +141,8 @@ The generator adds the intro and outro automatically, so never write them into a
 
    **You need an NVIDIA GPU** with CUDA and about 8 GB of video memory, because Qwen3-TTS voices Miguel by cloning
    his reference clip, `assets/voices/miguel.wav`. Kokoro, which voices Mei, runs on any computer, so an episode
-   hosted only with Kokoro voices renders without a GPU. On a laptop RTX 4060, a full 20 to 30 minute episode takes
-   roughly **25 to 45 minutes** to render, and the first run also downloads the Qwen3-TTS model (about 4.5 GB).
+   hosted only with Kokoro voices renders without a GPU. On a laptop RTX 4060, rendering takes **about as long as
+   the episode itself**, so 20 to 30 minutes, and the first run also downloads the Qwen3-TTS model (about 4.5 GB).
 
    ```
    pip install torch --index-url https://download.pytorch.org/whl/cu124

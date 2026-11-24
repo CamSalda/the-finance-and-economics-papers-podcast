@@ -43,7 +43,6 @@ have no DOI. The papers belong to their authors and publishers: follow the DOI l
 - Lucas, R. E. (1978). Asset prices in an exchange economy. *Econometrica*, *46*(6), 1429–1445. https://doi.org/10.2307/1913837
 - Breeden, D. T. (1979). An intertemporal asset pricing model with stochastic consumption and investment opportunities. *Journal of Financial Economics*, *7*(3), 265–296. https://doi.org/10.1016/0304-405x(79)90016-3
 - Hansen, L. P., & Singleton, K. J. (1983). Stochastic consumption, risk aversion, and the temporal behavior of asset returns. *Journal of Political Economy*, *91*(2), 249–265. https://doi.org/10.1086/261141
-- Mehra, R., & Prescott, E. C. (1985). The equity premium: A puzzle. *Journal of Monetary Economics*, *15*(2), 145–161. https://doi.org/10.1016/0304-3932(85)90061-3
 - Mankiw, N. G. (1986). The equity premium and the concentration of aggregate shocks. *Journal of Financial Economics*, *17*(1), 211–219. https://doi.org/10.1016/0304-405x(86)90012-7 **[Released](episodes/mankiw-1986-equity-premium/)**
 - Hansen, L. P., & Jagannathan, R. (1991). Implications of security market data for models of dynamic economies. *Journal of Political Economy*, *99*(2), 225–262. https://doi.org/10.1086/261749
 - Heaton, J., & Lucas, D. J. (1996). Evaluating the effects of incomplete markets on risk sharing and asset pricing. *Journal of Political Economy*, *104*(3), 443–487. https://doi.org/10.1086/262030
