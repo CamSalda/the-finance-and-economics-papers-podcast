@@ -1,7 +1,7 @@
-# The Finance Papers Podcast: One Equation to Rule Them All. Cochrane (2017) on Macro-Finance
+# The Finance and Economics Papers Podcast: One Equation to Rule Them All. Cochrane (2017) on Macro-Finance
 
-> **Open-source educational project.** The Finance Papers Podcast is a free, open-source initiative whose only
-> goal is education: to create and spread knowledge about research in finance. This episode is an independent,
+> **Open-source educational project.** The Finance and Economics Papers Podcast is a free, open-source initiative whose only
+> goal is education: to create and spread knowledge about research in finance and economics. This episode is an independent,
 > unofficial explanation of the paper below, written in our own words for teaching purposes. It is not affiliated
 > with or endorsed by the authors or the publisher. The paper is not reproduced here: read the original at the
 > DOI link. Short quotes are attributed to the authors. Scripts and audio are released under CC BY 4.0; the paper
@@ -15,7 +15,7 @@
 
 ## Cold open
 
-MEI: Welcome to The Finance Papers Podcast, where we discuss the papers that shaped finance, to make reading them easier and more fun. I'm Mei.
+MEI: Welcome to The Finance and Economics Papers Podcast, where we discuss the papers that shaped finance and economics, to make reading them easier and more fun. I'm Mei.
 
 MIGUEL: And I'm Miguel. I'm the one who asks the questions you're too embarrassed to ask in class.
 
@@ -295,6 +295,6 @@ MEI: His favorite, habits, is in his words "at least not yet superseded," becaus
 
 MIGUEL: My takeaway: ten theories, one equation, and the Gods are displeased. Also, write the 900-word version of your paper before the 40-page one.
 
-MEI: And read the paper. It's the rare survey that is fun to read. Thanks for listening to The Finance Papers Podcast.
+MEI: And read the paper. It's the rare survey that is fun to read. Thanks for listening to The Finance and Economics Papers Podcast.
 
 MIGUEL: See you next time.

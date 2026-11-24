@@ -1,8 +1,8 @@
-# The Finance Papers Podcast: instructions for AI agents
+# The Finance and Economics Papers Podcast: instructions for AI agents
 
-This repository is a free, open-source, educational project. It turns academic papers in finance into two-host
-podcast episodes. Each episode lives in `episodes/<authors>-<year>-<keywords>/` as `script.md` plus the MP3, which
-the renderer names after the APA citation in the script header (`Surnames_Year_Title.mp3`).
+This repository is a free, open-source, educational project. It turns academic papers in finance and economics into
+two-host podcast episodes. Each episode lives in `episodes/<authors>-<year>-<keywords>/` as `script.md` plus the
+MP3, which the renderer names after the APA citation in the script header (`Surnames_Year_Title.mp3`).
 
 To create an episode from a paper, follow the skill in `.agents/skills/paper-to-podcast/SKILL.md`. It defines the
 hosts, tone, structure, the 30-minute maximum, the accuracy and intellectual-property rules, and how to render audio.

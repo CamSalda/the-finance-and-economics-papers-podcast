@@ -1,7 +1,7 @@
-# The Finance Papers Podcast: Six Percent Too Many. Mehra and Prescott (1985) and the Equity Premium Puzzle
+# The Finance and Economics Papers Podcast: Six Percent Too Many. Mehra and Prescott (1985) and the Equity Premium Puzzle
 
-> **Open-source educational project.** The Finance Papers Podcast is a free, open-source initiative whose only
-> goal is education: to create and spread knowledge about research in finance. This episode is an independent,
+> **Open-source educational project.** The Finance and Economics Papers Podcast is a free, open-source initiative whose only
+> goal is education: to create and spread knowledge about research in finance and economics. This episode is an independent,
 > unofficial explanation of the paper below, written in our own words for teaching purposes. It is not affiliated
 > with or endorsed by the authors or the publisher. The paper is not reproduced here: read the original at the
 > DOI link. Short quotes are attributed to the authors. Scripts and audio are released under CC BY 4.0; the paper
@@ -15,7 +15,7 @@
 
 ## Cold open
 
-MEI: Welcome to The Finance Papers Podcast, where we discuss the papers that shaped finance, to make reading them easier and more fun. I'm Mei.
+MEI: Welcome to The Finance and Economics Papers Podcast, where we discuss the papers that shaped finance and economics, to make reading them easier and more fun. I'm Mei.
 
 MIGUEL: And I'm Miguel, still asking the questions you're too embarrassed to ask in class.
 
@@ -289,6 +289,6 @@ MEI: Most likely, the model that explains the equity premium is not a frictionle
 
 MIGUEL: And my takeaway: six percent is a lot. If your model can only give me 0.35, check your model, not the data.
 
-MEI: Thanks for listening to The Finance Papers Podcast.
+MEI: Thanks for listening to The Finance and Economics Papers Podcast.
 
 MIGUEL: See you next time. And remember: six percent is not a rounding error.

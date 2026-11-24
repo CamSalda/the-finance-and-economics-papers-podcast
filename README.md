@@ -1,10 +1,11 @@
-# The Finance Papers Podcast
+# The Finance and Economics Papers Podcast
 
-![The Finance Papers Podcast: analyzing the world of finance, one paper at a time](assets/graphical-identity.jpg)
+![The Finance and Economics Papers Podcast: analyzing the world of finance, one paper at a time](assets/graphical-identity.jpg)
 
-**The Finance Papers Podcast is a free, open-source, educational project.** Its only goal is to create and
-spread knowledge about research in finance. It turns academic papers into casual, pedagogical audio episodes, so
-that students, and anyone curious, can learn what the research says and then go read the papers themselves.
+**The Finance and Economics Papers Podcast is a free, open-source, educational project.** Its only goal is to
+create and spread knowledge about research in finance and economics. It turns academic papers into casual,
+pedagogical audio episodes, so that students, and anyone curious, can learn what the research says and then go read
+the papers themselves.
 
 The project is non-commercial. It is not affiliated with, sponsored by, or endorsed by any author, journal or
 publisher of the papers discussed. Anyone can listen, reuse the material with attribution, and contribute new
@@ -23,10 +24,11 @@ Two hosts walk through one paper step by step:
 - **Mei, the guide**, knows the paper inside out and explains every technical term as it comes up.
 - **Miguel, the student**, asks the questions you would ask, restates ideas in his own words, and brings the jokes.
 
-The target listener
-is a finance student with some technical training who is still learning. Along the way, the hosts share interesting
-facts about the authors, their academic connections and the papers around each one. Every episode lasts at most 30
-minutes, closes with a one-minute recap of the paper, and comes with its full script, which doubles as a transcript. Nobody reads equations aloud: the hosts describe what each equation contains and why it matters.
+The target listener is a finance or economics student with some technical training who is still learning. Along the
+way, the hosts share interesting facts about the authors, their academic connections and the papers around each
+one. Every episode lasts at most 30 minutes, closes with a one-minute recap of the paper, and comes with its full
+script, which doubles as a transcript. Nobody reads equations aloud: the hosts describe what each equation contains
+and why it matters.
 
 ## How the episodes are made
 
@@ -68,9 +70,9 @@ handled by the tables in [EPISODES.md](EPISODES.md), where one paper can appear 
 
 ## How to contribute
 
-Thank you for being interested in contributing to The Finance Papers Podcast. This is an open-source, collective,
-educational effort, and everyone is welcome to contribute: students, researchers, teachers and anyone who loves
-finance.
+Thank you for being interested in contributing to The Finance and Economics Papers Podcast. This is an open-source,
+collective, educational effort, and everyone is welcome to contribute: students, researchers, teachers and anyone
+who loves finance.
 
 ### Ways to contribute
 
@@ -98,8 +100,9 @@ finance.
 
 Every episode has the same shape:
 
-1. **Intro.** The show's theme, with the guide reading the tagline: "The Finance Papers Podcast. A free, open-source
-   educational project in which we discuss and explain classical papers and current research in finance."
+1. **Intro.** The show's theme, with the guide reading the tagline: "The Finance and Economics Papers Podcast. A
+   free, open-source educational project in which we discuss and explain classical papers and current research in
+   finance and economics."
 2. **Cold open.** The hosts introduce themselves and read the spoken educational notice.
 3. **The episode** itself.
 4. **Recap.** A one-minute summary of the paper's question, method, main takeaways and conclusions.
@@ -114,9 +117,9 @@ The generator adds the intro and outro automatically, so never write them into a
 3. Clone your fork and add this repository as `upstream`:
 
    ```
-   git clone git@github.com:<your-github-handle>/the-finance-papers-podcast.git
-   cd the-finance-papers-podcast
-   git remote add upstream git@github.com:CamSalda/the-finance-papers-podcast.git
+   git clone git@github.com:<your-github-handle>/the-finance-and-economics-papers-podcast.git
+   cd the-finance-and-economics-papers-podcast
+   git remote add upstream git@github.com:CamSalda/the-finance-and-economics-papers-podcast.git
    ```
 
 4. Create a branch for your episode. Never work on `main`.
@@ -217,6 +220,6 @@ unchanged, apart from being mixed under the hosts' voices. The credit is also sp
 ## License
 
 The scripts and audio in this repository are released under the [Creative Commons Attribution 4.0](LICENSE)
-license. You can share and adapt them for any purpose, as long as you credit The Finance Papers Podcast. The papers
-discussed belong to their authors and publishers and are not covered by this license. The theme music keeps its own
-CC BY 4.0 license and credit, given above.
+license. You can share and adapt them for any purpose, as long as you credit The Finance and Economics Papers
+Podcast. The papers discussed belong to their authors and publishers and are not covered by this license. The theme
+music keeps its own CC BY 4.0 license and credit, given above.
