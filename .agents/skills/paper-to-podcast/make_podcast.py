@@ -44,8 +44,9 @@ PAUSE_SECONDS = 0.3
 QWEN_MODEL = "Qwen/Qwen3-TTS-12Hz-1.7B-Base"
 QWEN_SAMPLING = dict(temperature=0.3, subtalker_temperature=0.3)
 QWEN_SEED = 1234
-QWEN_MAX_SECONDS_PER_WORD = 1.5  # a longer output is a runaway generation, so retry with a new seed
-QWEN_SPEED = 1.07
+QWEN_MAX_SECONDS_PER_WORD = 1.5  # a longer output is a runaway generation, so cut it off and retry with a new seed
+QWEN_TOKENS_PER_SECOND = 12.6  # codec tokens per second of audio, measured on the 12Hz model
+QWEN_SPEED = 1.05
 QWEN_LOUDNESS = 1.2
 QWEN_PRONUNCIATIONS = {"Miguel": "Mi-GHEL"}
 TAGLINE = (
@@ -89,12 +90,14 @@ class Qwen:
             self.prompts[name] = self.model.create_voice_clone_prompt(ref_audio=(reference, rate), ref_text=transcript)
         for word, spelling in QWEN_PRONUNCIATIONS.items():
             text = text.replace(word, spelling)
+        allowance = QWEN_MAX_SECONDS_PER_WORD * len(text.split()) + 1
         for attempt in range(5):
             torch.manual_seed(QWEN_SEED + attempt)
             wavs, rate = self.model.generate_voice_clone(
-                text=text, language="English", voice_clone_prompt=self.prompts[name], **QWEN_SAMPLING
+                text=text, language="English", voice_clone_prompt=self.prompts[name],
+                max_new_tokens=int(QWEN_TOKENS_PER_SECOND * (allowance + 2)), **QWEN_SAMPLING
             )
-            if len(wavs[0]) / rate <= QWEN_MAX_SECONDS_PER_WORD * len(text.split()) + 1:
+            if len(wavs[0]) / rate <= allowance:
                 break
             print(f"runaway generation ({len(wavs[0]) / rate:.0f} s), retrying: {text[:60]}", flush=True)
         samples = resample_poly(np.asarray(wavs[0], dtype=np.float32), SAMPLE_RATE, rate)
