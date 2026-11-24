@@ -10,7 +10,7 @@
 - **Paper:** Mankiw, N. G. (1986). The equity premium and the concentration of aggregate shocks. *Journal of Financial Economics*, 17(1), 211-219.
 - **Read the paper:** https://doi.org/10.1016/0304-405X(86)90012-7
 - **Topics:** Asset pricing; equity premium puzzle; incomplete markets
-- **Length:** 23 minutes
+- **Length:** 22 minutes
 - **Hosts:** Mei (the guide) and Miguel (the student)
 
 ## Cold open
