@@ -45,7 +45,7 @@ TURN = re.compile(r"^([A-ZÀ-Ý]+): (.+)$", re.M)
 CITATION = re.compile(r"^- \*\*Paper:\*\* (.+?) \((\d{4})\)\. (.+?)\. \*", re.M)
 INITIALS = re.compile(r"^(?:&|and)? ?(?:[A-Z]\.(?: ?[A-Z]\.)*)?$")
 KOKORO_SPEED = 1.1
-KOKORO_PRONUNCIATIONS = {"is read the original paper": "is reed the original paper"}  # Kokoro says "red" here
+KOKORO_PRONUNCIATIONS = {"is read the original paper": "is reed the original paper", "ESCP": "E. S. C. P."}  # Kokoro says "red" here, and reads ESCP as a word
 PAUSE_SECONDS = 0.3
 QWEN_PRESET_MODEL = "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice"
 QWEN_CLONE_MODEL = "Qwen/Qwen3-TTS-12Hz-1.7B-Base"
@@ -54,7 +54,7 @@ QWEN_SEED = 1234
 QWEN_MAX_SECONDS_PER_WORD = 1.5  # a longer output is a runaway generation, so cut it off and retry with a new seed
 QWEN_TOKENS_PER_SECOND = 12.6  # codec tokens per second of audio, measured on the 12Hz model
 QWEN_LOUDNESS = 1.2
-QWEN_PRONUNCIATIONS = {"Miguel": "Mi-GHEL"}
+QWEN_PRONUNCIATIONS = {"Miguel": "Mi-GHEL", "ESCP": "E. S. C. P."}
 TAGLINE = (
     "The Finance and Economics Papers Podcast. A free, open-source educational project in which we discuss and explain "
     "classical papers and current research in finance and economics."

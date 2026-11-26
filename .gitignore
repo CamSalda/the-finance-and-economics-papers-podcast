@@ -6,3 +6,4 @@
 
 # Python caches
 __pycache__/
+.venv/
